@@ -12,7 +12,7 @@ Lets create the first Java project in Intellij.
 
 - Select **Create project from template**.
 
-![](https://github.com/dilipSundar/Java-Training/blob/master/images/Java-1.png)
+![](https://github.com/dilipSundar/Java-Training/blob/master/images/Java-2.png)
 
 - Provide a project name
 

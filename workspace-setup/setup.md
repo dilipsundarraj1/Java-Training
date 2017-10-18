@@ -43,3 +43,20 @@ http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.h
 ```
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home
 ```
+
+## Intellij Installation in Mac
+
+### Download the intellij in Mac:
+
+- Go to the below link and download intellij.
+
+https://www.jetbrains.com/idea/download/#section=mac
+
+- Select the **OS** as **MAC**
+
+- Click on the Community version **Download** button.
+
+### Installation of Intellij:
+
+- Double click on the image icon
+- Installation will be complete.

@@ -66,5 +66,19 @@ public class Sample1 {
             System.out.println(x);
             x--;
         }
+        x=0;
+        for(int j=0;j<100;j++)
+            for(int k=100;k>0;k--)
+                x++;
+        System.out.println("Executed time s" + x);
+
+        String s1="Dilip";
+        String s2="Dilip";
+        System.out.println(s1.length() == s2.length());
+        System.out.println(s1.equals(s2));
+
+        for(int j=s1.length();j>0;j--){
+            System.out.println(s1.charAt(j-1));
+        }
     }
 }

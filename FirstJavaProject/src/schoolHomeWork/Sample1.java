@@ -80,5 +80,18 @@ public class Sample1 {
         for(int j=s1.length();j>0;j--){
             System.out.println(s1.charAt(j-1));
         }
+        int i=0;
+       /* for(int j=0;j<1000;)
+            System.out.println("inside for loop");
+            i++;*/
+        int count=0;
+        for(int j=0;j<10;j++)
+            for(int k=10;k>j;k--){
+                System.out.println("*");
+                count=count+1;
+            }
+
+        System.out.println("count : "+ count);
+
     }
 }

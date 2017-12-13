@@ -14,11 +14,11 @@ public class DecimalFormatExample {
         NumberFormat percent = NumberFormat.getPercentInstance();
         System.out.println(percent.format(0.06));
 
-        Locale[] locales = NumberFormat.getAvailableLocales();
+        /*Locale[] locales = NumberFormat.getAvailableLocales();
 
         for(Locale lo : locales){
             System.out.println(lo.getCountry());
-        }
+        }*/
 
     }
 }

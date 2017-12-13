@@ -14,6 +14,10 @@ public class Price {
         double total, subtotal, tax, unitPrice;
 
         Scanner scan = new Scanner(System.in);
+        System.out.println("Enter the Product you want to buy : ");
+
+        String item = scan.next();
+        System.out.println("Item is : " + item);
 
         System.out.println("Enter the quantity : ");
         quantity = scan.nextInt();

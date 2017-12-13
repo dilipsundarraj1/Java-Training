@@ -14,19 +14,29 @@ public class NumberFormatExample {
 
         System.out.println(numberFormat.format(100));
 
-        Locale indiaLocale = new Locale("in", "IN");
+       Locale indiaLocale = new Locale("in", "IN");
 
         NumberFormat numberFormat1 = NumberFormat.getCurrencyInstance(indiaLocale);
 
         System.out.println(numberFormat1.format(100));
 
-        Locale ukLocale = new Locale("en", "GB");
+       Locale ukLocale = new Locale("en", "GB");
 
         numberFormat1 = NumberFormat.getCurrencyInstance(ukLocale);
 
         System.out.println(numberFormat1.format(100));
 
-        Locale japanLocale = new Locale("en", "JP");
+         Locale japanLocale = new Locale("en", "JP");
+
+        numberFormat1 = NumberFormat.getCurrencyInstance(japanLocale);
+
+        System.out.println(numberFormat1.format(100));
+
+        Locale chinaLocale = new Locale("en", "CN");
+
+        numberFormat1 = NumberFormat.getCurrencyInstance(chinaLocale);
+
+        System.out.println(numberFormat1.format(100));
 
     }
 }

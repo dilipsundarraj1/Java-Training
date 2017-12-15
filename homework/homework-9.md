@@ -1,0 +1,36 @@
+- This needs to be done in the homework project.
+- Create a package named **recap** in the homework project.
+  - Create a class named **Recap1**.
+    - create a method named **printString**.
+      - Print any string of your choice.
+    - create a method named **returnString**
+      - This method should return a String and it should be printed in the console.
+    - create a method named **returnInt**
+      - This method should return a Integer and it should be printed in the console.
+    - Create a for loop and Iterate the for loop 10 times forward.
+      - It should print 1,2,3,4,5,6,7,8,9,10
+    - Create a for loop and Iterate the for loop 10 times backwards.
+      - It should print 10,9,8,7,6,5,4,3,2,1
+    - Create a class named FourDiceRoll.
+      - Roll the dice 16 times.
+      - Every time the dice rolls it should print the value greater than 4.
+    - Create a class named FootBall Player
+
+    - Properties are as follows:
+        - name
+        - gender
+        - pointScored
+    -  Create a constructor with no Arguments
+        - Print "Default constructor" message inside the constructor
+    - Create a constructor with 3 arguments.
+        - Use the this keyword to set the Properties for the class.
+    -   Create an object with name footBallPlayer.
+        - set the properties as you like.
+    - Create an object with name footBallPlayer1.
+        - set the properties as you like.
+    - Create an object with name footBallPlayer2.
+        - set the properties as you like.
+    -   Create the getter and setter methods for all the properties.
+    - Create a class named FootBallPlayerHelper.
+    - Create a footBallPlayer object in footBallPlayerHelper class.
+    - Call the getter and setter methods in order to set the all the properties and print the values in the GolfPlayerHelper.

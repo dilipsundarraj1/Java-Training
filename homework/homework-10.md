@@ -1,0 +1,35 @@
+- Create a project named **Second-Java-Project**
+- Create a package named **learnJava**.
+- Create a class named **HelloWorld**.
+- - create a method named **printString1**.
+  - Print any string of your choice.
+- create a method named **returnString1**
+  - This method should return a String and it should be printed in the console.
+- create a method named **returnInt1**
+  - This method should return a Integer and it should be printed in the console.
+- Create a for loop and Iterate the for loop 10 times forward.
+  - It should print 11,12,13,14,15,16,17,18,19,20
+- Create a for loop and Iterate the for loop 10 times backwards.
+  - It should print 20,19,18,17,16,15,14,13,12,11
+- Create a class named FiveDiceRoll.
+  - Roll the dice 25 times.
+  - Every time the dice rolls it should print the value greater than 5.
+- Create a class named FuseBall Player
+- Properties are as follows:
+    - name
+    - gender
+    - pointScored
+-  Create a constructor with no Arguments
+    - Print "Default constructor" message inside the constructor
+- Create a constructor with 3 arguments.
+    - Use the this keyword to set the Properties for the class.
+-   Create an object with name FuseBallPlayer.
+    - set the properties as you like.
+- Create an object with name FuseBallPlayer1.
+    - set the properties as you like.
+- Create an object with name FuseBallPlayer2.
+    - set the properties as you like.
+-   Create the getter and setter methods for all the properties.
+- Create a class named FuseBallPlayerHelper.
+- Create a FuseBallPlayer object in FuseBallPlayerHelper class.
+- Call the getter and setter methods in order to set the all the properties and print the values in the FusePlayerHelper.

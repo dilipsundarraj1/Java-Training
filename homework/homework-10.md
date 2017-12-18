@@ -33,3 +33,5 @@
 - Create a class named FuseBallPlayerHelper.
 - Create a FuseBallPlayer object in FuseBallPlayerHelper class.
 - Call the getter and setter methods in order to set the all the properties and print the values in the FusePlayerHelper.
+
+- Finally push this whole project to your github account.

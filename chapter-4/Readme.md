@@ -10,7 +10,7 @@ Examples:
 
 ### Anatomy of a class:
 
- -  A class will have properties.
+ -  A class will have members or properties.
  
  ```aidl
     public class BaseketBallPlayer{
@@ -101,3 +101,52 @@ Examples:
 
 -   The constructors will be invoked for the above call. Because we created an object using **new** operator.
 
+-   The **basketBallPlayer** is the instance of the BasketBallPlayer.
+-   The data it holds is the instance data.
+    -   jerseryNumber
+    -   playerName
+    -   pointsScored
+
+#### Encapsulation:
+
+-   This is a concept of hiding the members of the class to the outside world.
+
+#### Visibility Modifiers
+
+-   public, private , default and protected
+
+
+    
+-   **private:**
+    -   If a method or variable is marked as private (has the private access modifier assigned to it), then only code inside the same class can access the variable, or call the method.
+    -   A class never be marked private.
+    
+```aidl
+public class PrivateAccessModifier {
+
+    private int age;
+    private String name;
+}
+
+```
+          
+-   **default:**
+    -   Any class or class member declaration without any Visibility Modifiers is the default.
+    -   This class will be accessible only to other classes which are in the same package.
+
+```aidl
+package com.learnJava.accessModifiers;
+
+class DefaultAccessModifier {
+
+    int age;
+    String name;
+}
+
+```
+
+-   **protected**
+    -   This behaves the same as default, with the addition that subclasses can access protected methods and member variables (fields) of the superclass
+    
+-   **public:**
+    -   This means any outside class can access this class and its members from outside.

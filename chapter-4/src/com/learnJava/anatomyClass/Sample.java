@@ -8,6 +8,6 @@ public class Sample {
         /*DefaultAccessModifier defaultAccessModifier = new DefaultAccessModifier()*/
 
         PrivateAccessModifier privateAccessModifier= new PrivateAccessModifier();
-        privateAccessModifier.age = 12;
+        //privateAccessModifier.age = 12;
     }
 }

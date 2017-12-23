@@ -154,7 +154,7 @@ class DefaultAccessModifier {
 
 #### Method:
 
--   Syntax is below.
+-   Syntax for the method is below.
 
 ```aidl
 <visibility modifier> <return-type> methodName(arguments...){
@@ -170,4 +170,11 @@ class DefaultAccessModifier {
         jerseryNumber = jerseyNum;
     }
     
+```
+
+-   How to Call a method and change the JerseyNum ?
+ 
+ ```aidl
+ BasketBallPlayer basketBallPlayer = new BasketBallPlayer(1,"Dilip", 5);
+ basketBallPlayer.changeJerseyNumber(2);
 ```

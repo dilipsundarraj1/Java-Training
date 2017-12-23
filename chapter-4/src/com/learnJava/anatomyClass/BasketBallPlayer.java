@@ -20,6 +20,11 @@ public class BasketBallPlayer {
 
     }
 
+    public void changeJerseyNumber(int jerseyNum){
+
+        jerseryNumber = jerseyNum;
+    }
+
     /**
      * Constructor with Arguments
      * @param jerseryNum

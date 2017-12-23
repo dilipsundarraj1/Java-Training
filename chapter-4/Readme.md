@@ -202,7 +202,7 @@ Example:
 
 Code Examples:    
 
-**return String**
+**return String:**
 -   
 ```aidl
  public String getName() {
@@ -211,7 +211,7 @@ Code Examples:
 
 ```
 
-**return int**
+**return int:**
 
 ```aidl
  public int getId() {

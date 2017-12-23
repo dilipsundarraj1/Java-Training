@@ -220,8 +220,9 @@ Code Examples:
 ```
 
 **Void:**
-    -   When a method does not return anything then the return type holds void.
-    -   void is used mainly in the setter methods.
+
+-   When a method does not return anything then the return type holds void.
+-   void is used mainly in the setter methods.
     
     
 ```aidl

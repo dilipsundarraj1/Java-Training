@@ -152,17 +152,31 @@ class DefaultAccessModifier {
 -   **public:**
     -   This means any outside class can access this class and its members from outside.
 
-#### Method:
+#### Anatomy of a Method:
+
+-   Any method in Java will have the following.
+    -   Access Modifier
+    -   Return type or void
+    -   Method name
+    -   Parameters
+    -   Method Body
+    
+
+##### Method Declaration:
+
+-   A Method declation defines the code that needs to be executed when its invoked.
 
 -   Syntax for the method is below.
 
 ```aidl
-<visibility modifier> <return-type> methodName(arguments...){
+<visibility modifier> <return-type> methodName(parameters...){
+
+    Method Body
 }
 
 ```
 
--   Sample code below.
+Example:  
 
 ```
  public void changeJerseyNumber(int jerseyNum){
@@ -172,9 +186,47 @@ class DefaultAccessModifier {
     
 ```
 
+##### Method Invocation:
+
 -   How to Call a method and change the JerseyNum ?
  
  ```aidl
  BasketBallPlayer basketBallPlayer = new BasketBallPlayer(1,"Dilip", 5);
  basketBallPlayer.changeJerseyNumber(2);
 ```
+
+#### The Return Statement
+
+-   This will be part of the method header.
+-   This can be primitive(int, double) , String or any Object.
+
+Code Examples:    
+
+**return String**
+-   
+```aidl
+ public String getName() {
+        return name;
+    }
+
+```
+
+**return int**
+
+```aidl
+ public int getId() {
+        return id;
+    }
+```
+
+-   Void:
+    -   When a method does not return anything then the return type holds void.
+    -   void is used mainly in the setter methods.
+    
+    
+```aidl
+public void setId(int id) {
+        this.id = id;
+    }
+```
+    

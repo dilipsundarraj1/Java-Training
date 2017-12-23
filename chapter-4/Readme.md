@@ -151,3 +151,23 @@ class DefaultAccessModifier {
     
 -   **public:**
     -   This means any outside class can access this class and its members from outside.
+
+#### Method:
+
+-   Syntax is below.
+
+```aidl
+<visibility modifier> <return-type> methodName(arguments...){
+}
+
+```
+
+-   Sample code below.
+
+```
+ public void changeJerseyNumber(int jerseyNum){
+
+        jerseryNumber = jerseyNum;
+    }
+    
+```

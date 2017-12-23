@@ -40,6 +40,7 @@ public class BasketBallPlayer {
     public static void main(String[] args) {
 
         BasketBallPlayer basketBallPlayer = new BasketBallPlayer(1,"Dilip", 5);
+        basketBallPlayer.changeJerseyNumber(2);
     }
 
 

@@ -146,6 +146,7 @@ class DefaultAccessModifier {
 ```
 
 -   **protected**
+    -   This is used only for variable and methods.
     -   This behaves the same as default, with the addition that subclasses can access protected methods and member variables (fields) of the superclass
     
 -   **public:**

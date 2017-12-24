@@ -231,3 +231,24 @@ public void setId(int id) {
     }
 ```
     
+#### Parameters:
+
+-   Parameters are categorized into two categories.
+    -   Formal parameters.
+        -   The parameters in the header of method decalration.
+        
+            ```aidl
+            public void setId(int id) { -> These are called formal parameters
+                    this.id = id;
+                }
+            
+            ```
+    -   Actual parameters.
+        -   The values passed to the  method are called Actual Parameters.
+        
+        ```aidl
+        Employee employee = new Employee(1, "Dilip");
+        employee.setId(3);
+
+         ```
+ 

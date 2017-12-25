@@ -106,6 +106,7 @@ Examples:
     -   jerseryNumber
     -   playerName
     -   pointsScored
+-   Instance data is accessible throughout the class.
 
 #### Encapsulation:
 
@@ -233,6 +234,8 @@ public void setId(int id) {
     
 #### Parameters:
 
+-   In general parameters are referred to the values passed to the method.
+ 
 -   Parameters are categorized into two categories.
     -   Formal parameters.
         -   The parameters in the header of method decalration.
@@ -251,4 +254,57 @@ public void setId(int id) {
             employee.setId(3); -> 3 is the actual parameter
     
              ```
- 
+#### Local Data:
+
+-   A variable declared inside a method is referred as local Data.
+
+
+```aidl
+public class TV {
+
+    private String type;
+    private int tvSize;
+
+    public TV(String type, int tvSize) {
+        this.type = type;
+        this.tvSize = tvSize;
+    }
+
+    public void start(){
+
+        int channel =0; //- > This is a local data.
+    }
+
+   
+}
+
+```
+
+-   A local data is something which is not accesible outside the method.
+
+##### Local Data vs Instance Data:
+-   Local data is visible only to the method. Meaning you cannot refer to the data outside the method.
+-   Instance data is visible throughout the class.
+
+
+#### Accessors and Mutators:
+
+**Accessor:**
+    -   Accessor method provides read only access to a particular value.
+    -   Accessor method names always starts with **getX()**
+    
+    ```
+     public String getType() {
+            return type;
+        }
+    ```
+ **Mutator**
+    -   A mutator method is otherwise called as modifier method.
+    -   Mutator names have the form **setX**
+    
+    ```
+    public void setType(String type) {
+            this.type = type;
+        }
+
+    ```

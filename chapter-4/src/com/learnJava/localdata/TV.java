@@ -18,6 +18,16 @@ public class TV {
         int channel =0;
     }
 
+    public void start(String samsungTV){
+
+        int channel =0;
+    }
+
+    public void start(int  times){
+
+        int channel =0;
+    }
+
     public String getType() {
         return type;
     }

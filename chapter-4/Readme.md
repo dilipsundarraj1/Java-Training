@@ -159,7 +159,7 @@ class DefaultAccessModifier {
     -   Access Modifier
     -   Return type or void
     -   Method name
-    -   Parameters
+    -   Parameters/Parameter List
     -   Method Body
     
 
@@ -308,3 +308,67 @@ public class TV {
         }
 
     ```
+    
+ ### Method Overloading:
+ 
+ -  In Java you can use the same method with different parameter lists for several methods.This is called method Overloading.
+ 
+ #### Method Signature:
+ -  The method name along with the type and order of its parameters are called Methods signature.
+ 
+ Sample code for Method overloading:  
+ 
+ -  In the below examopke 
+ 
+ ```aidl
+public class TV {
+
+    private String type;
+    private int tvSize;
+
+    public TV(String type, int tvSize) {
+        this.type = type;
+        this.tvSize = tvSize;
+    }
+
+    public void start(){
+
+        int channel =0;
+    }
+
+    public void start(String samsungTV){
+
+        int channel =0;
+    }
+
+    public void start(int  times){
+        
+        int channel =0;
+    }
+    }
+```
+
+##### Constructor Overloading:
+
+-    Below is the sample for constructor overloading.
+
+```aidl
+public class Car {
+
+    private String owner;
+    private  int year;
+    private String model;
+
+    private Car(){
+        
+    }
+
+    public Car(int year) {
+        this.year = year;
+    }
+
+    public Car(String owner) {
+        this.owner = owner;
+    }
+}
+```

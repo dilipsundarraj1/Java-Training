@@ -372,3 +372,229 @@ public class Car {
     }
 }
 ```
+
+### Method Decomposition:
+
+-   This is the concept of decomposing a method in to multiple methods.
+
+
+#### Object RelationShips:
+
+-   Two classes have a Association if they are aware of each other.
+
+Example code:
+  
+  -   Below is a Student Class.
+
+```aidl
+public class Student {
+
+    private String firstName;
+    private String lastName;
+    private String id;
+    private SchoolAddress schoolAddress;
+    private HomeAddress homeAddress;
+
+    public Student(String firstName, String lastName, String id, SchoolAddress schoolAddress, HomeAddress homeAddress) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.id = id;
+        this.schoolAddress = schoolAddress;
+        this.homeAddress = homeAddress;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public SchoolAddress getSchoolAddress() {
+        return schoolAddress;
+    }
+
+    public void setSchoolAddress(SchoolAddress schoolAddress) {
+        this.schoolAddress = schoolAddress;
+    }
+
+    public HomeAddress getHomeAddress() {
+        return homeAddress;
+    }
+
+    public void setHomeAddress(HomeAddress homeAddress) {
+        this.homeAddress = homeAddress;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", id='" + id + '\'' +
+                ", schoolAddress=" + schoolAddress +
+                ", homeAddress=" + homeAddress +
+                '}';
+    }
+
+
+    public static void main(String[] args) {
+
+        SchoolAddress schoolAddress = new SchoolAddress("1234 Street1","AppleValley","MN", "55222");
+        HomeAddress homeAddress = new HomeAddress("1234 Street3","Eagan","MN", "55111");
+
+        Student student = new Student("XYZ","ABC", "123", schoolAddress, homeAddress);
+
+    }
+}
+```
+
+**SchoolAddress:**
+
+```aidl
+public class SchoolAddress {
+
+    private String addressLine;
+    private String city;
+    private String state;
+    private String zipCode;
+
+    public SchoolAddress(String addressLine, String city, String state, String zipCode) {
+            this.addressLine = addressLine;
+            this.city = city;
+            this.state = state;
+            this.zipCode = zipCode;
+        }
+
+    public String getAddressLine() {
+        return addressLine;
+    }
+
+    public void setAddressLine(String addressLine) {
+        this.addressLine = addressLine;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getZipCode() {
+        return zipCode;
+    }
+
+    public void setZipCode(String zipCode) {
+        this.zipCode = zipCode;
+    }
+
+    @Override
+    public String toString() {
+        return "SchoolAddress{" +
+                "addressLine='" + addressLine + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", zipCode='" + zipCode + '\'' +
+                '}';
+    }
+}
+
+```
+
+
+**HomeAddress:**
+
+```aidl
+package com.learnJava.association;
+
+public class HomeAddress {
+    private String addressLine;
+    private String city;
+    private String state;
+    private String zipCode;
+
+   public HomeAddress(String addressLine, String city, String state, String zipCode) {
+           this.addressLine = addressLine;
+           this.city = city;
+           this.state = state;
+           this.zipCode = zipCode;
+       }
+
+    public String getAddressLine() {
+        return addressLine;
+    }
+
+    public void setAddressLine(String addressLine) {
+        this.addressLine = addressLine;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getZipCode() {
+        return zipCode;
+    }
+
+    public void setZipCode(String zipCode) {
+        this.zipCode = zipCode;
+    }
+    
+     @Override
+        public String toString() {
+            return "HomeAddress{" +
+                    "addressLine='" + addressLine + '\'' +
+                    ", city='" + city + '\'' +
+                    ", state='" + state + '\'' +
+                    ", zipCode='" + zipCode + '\'' +
+                    '}';
+        }
+}
+
+```
+
+-   Student has two relationships.
+    -   SchoolAddress
+    -   HomeAddress
+-   We can say that Student **has a** relationship to  SchoolAddress.
+-   We can say that Student **has a** relationship to  HomeAddress.

@@ -185,6 +185,9 @@ while(<boolean-expression>){
 }
 ```
 
+-   The boolean expression should evaluate to true in order to execute the while loop.
+-   The boolean expression should evaluate to false in order to exit the while loop.
+
 ```aidl
 public class WhileLoop {
 

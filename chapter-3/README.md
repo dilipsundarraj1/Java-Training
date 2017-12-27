@@ -126,6 +126,7 @@ public class StirngComparison {
 ### Comparing Characters
 
 -   All the characters will have a unicode character, which will be used while comparing the characters.
+-   Values of the unicode will be in the increasing order a - z anf A-Z.
 
 ```aidl
 public class CharacterComparison {

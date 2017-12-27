@@ -122,3 +122,54 @@ public class StirngComparison {
 }
 
 ```
+
+### Comparing Characters
+
+-   All the characters will have a unicode character, which will be used while comparing the characters.
+
+```aidl
+public class CharacterComparison {
+
+    public static void main(String[] args) {
+
+        char c ='c';
+        char d ='d';
+        char c1='c';
+
+        System.out.println(c==d); -> false
+
+        System.out.println(c==c1);-> true
+
+
+        if(c>d){
+            System.out.println("c is greater than d");
+        }else{
+            System.out.println("c is lesser than d");
+        }
+
+
+
+    }
+
+
+```
+
+### Comparing Float Values
+
+```aidl
+public class ComparingFloat {
+
+    public static void main(String[] args) {
+
+        float f1=2.4533f;
+        float f2=2.4534f;
+
+        System.out.println(f1==f2);
+
+        System.out.println(f2-f1);
+        
+        System.out.println((Math.abs(f2-f1)< 0.1)); -> This is the best way of comparing float values
+    }
+}
+
+```

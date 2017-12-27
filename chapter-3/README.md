@@ -78,3 +78,47 @@
 </tr>
 
 </table>
+
+
+### Comparing Strings and Characters
+
+#### String
+
+- How to compare Strings ?
+
+    -   using the **equals** method.
+    -   using the **==** operator.
+
+```aidl
+public class StirngComparison {
+
+    public static void main(String[] args) {
+
+        String str ="Java";
+        String str2 ="Java";
+
+        System.out.println(str.equals(str2)); -> true
+
+        System.out.println(str==str2);-> true
+    }
+}
+```
+
+**EqualsIgnoreCase**
+
+
+```aidl
+public class StirngComparison {
+
+    public static void main(String[] args) {
+
+        String str ="Java";
+        String str2 ="JAVA";
+
+        System.out.println(str.equalsIgnoreCase(str2)); -> true
+
+        System.out.println(str==str2); -> false
+    }
+}
+
+```

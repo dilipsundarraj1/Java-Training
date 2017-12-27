@@ -32,3 +32,49 @@
     
     
 </table>
+
+#### Examples
+
+<table>
+
+<tr>
+      <th>a</th>
+      <th>b</th>
+      <th>a && b</th>
+      <th>a || b</th>
+      
+</tr>
+
+<tr>
+      <td>false</td>
+      <td>false</td>
+      <td>false</td>
+      <td>false</td>
+      
+</tr>
+
+<tr>
+      <td>false</td>
+      <td>true</td>
+      <td>false</td>
+      <td>true</td>
+      
+</tr>
+
+<tr>
+      <td>true</td>
+      <td>false</td>
+      <td>false</td>
+      <td>true</td>
+      
+</tr>
+
+<tr>
+      <td>true</td>
+      <td>true</td>
+      <td>true</td>
+      <td>true</td>
+      
+</tr>
+
+</table>

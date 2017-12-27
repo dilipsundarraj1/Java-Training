@@ -15,6 +15,8 @@ public class CharacterComparison {
 
         System.out.println(c==c1);
 
+        int i=1,j=2;
+        System.out.println(i==j);
 
         if(c>d){
             System.out.println("c is greater than d");

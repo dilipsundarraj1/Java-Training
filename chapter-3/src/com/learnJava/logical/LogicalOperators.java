@@ -11,8 +11,17 @@ public class LogicalOperators {
 
         a=true;
         b=false;
-        c=false;
 
-        System.out.println(a||b|| c);
+        c=false;
+        System.out.println(!a);
+        System.out.println(!b);
+
+        System.out.println(a && !b);
+
+        System.out.println(!a || b);
+
+
+
+       // System.out.println(a||b|| c);
     }
 }

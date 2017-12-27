@@ -174,3 +174,38 @@ public class ComparingFloat {
 }
 
 ```
+
+### While Loop
+
+Syntax:  
+
+```aidl
+while(<boolean-expression>){
+    <while body>
+}
+```
+
+```aidl
+public class WhileLoop {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        boolean flag=true;
+
+        while(flag){
+            System.out.println("Please enter a number : ");
+            int i = scanner.nextInt();
+            if(i<0){
+                flag=true;
+            }else{
+                flag=false;
+            }
+
+        }
+        System.out.println("Exiting the Program");
+
+    }
+}
+```

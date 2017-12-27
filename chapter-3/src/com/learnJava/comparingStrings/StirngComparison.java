@@ -12,6 +12,10 @@ public class StirngComparison {
 
         System.out.println(str.equalsIgnoreCase(str2));
 
+       // System.out.println(str.equalsIgnoreCase(str2));
+
         System.out.println(str==str2);
+
+
     }
 }

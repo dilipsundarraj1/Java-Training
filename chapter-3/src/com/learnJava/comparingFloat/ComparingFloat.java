@@ -13,6 +13,7 @@ public class ComparingFloat {
         System.out.println(f1==f2);
 
         System.out.println(f2-f1);
+        System.out.println(Math.abs(f2-f1));
 
         System.out.println((Math.abs(f2-f1)< 0.1));
     }

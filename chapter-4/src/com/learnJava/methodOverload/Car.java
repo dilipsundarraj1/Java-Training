@@ -9,7 +9,7 @@ public class Car {
     private  int year;
     private String model;
 
-    private Car(){
+    public Car(){
 
     }
 
@@ -29,6 +29,8 @@ public class Car {
                 ", model='" + model + '\'' +
                 '}';
     }
+
+
 
     public String getOwner() {
         return owner;

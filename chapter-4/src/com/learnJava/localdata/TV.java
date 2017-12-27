@@ -16,6 +16,7 @@ public class TV {
     public void start(){
 
         int channel =0;
+        type="LED";
     }
 
     public void start(String samsungTV){
@@ -42,5 +43,15 @@ public class TV {
 
     public void setTvSize(int tvSize) {
         this.tvSize = tvSize;
+    }
+
+
+    public static void main(String[] args) {
+
+        TV tv = new TV("LCD", 40);
+        tv.getType();
+        tv.setType("LED");
+
+
     }
 }

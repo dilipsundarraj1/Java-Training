@@ -11,10 +11,10 @@ Examples:
 ### Anatomy of a class:
 
  -  A class will have members or properties.
- 
+
  ```aidl
     public class BaseketBallPlayer{
-    
+
         /**
         * These are the properties
         **/
@@ -22,53 +22,53 @@ Examples:
         private String playerName;
         private int pointsScored;
     }
-    
+
 ```
 
  -  A class will have a constructor by default.
- 
+
  **Default Constructor:**  
- 
+
  -   By default any class will have the constructor with no Arguments.
- 
- 
+
+
  ```aidl
      public class BaseketBallPlayer{
-     
+
      /**Default Constructor**/
      public BaseketBallPlayer(){
-     
+
      }
-     
+
          /**
          * These are the properties
          **/
          private int jerseryNumber;
          private String playerName;
          private int pointsScored;
-         
+
      }
-     
+
  ```
- 
+
  **Constructor with Arguments or Parameters:**
- 
+
  ```aidl
- 
+
   public class BasketBallPlayer {
-  
+
       /**
        * Properties
        */
       private int jerseryNumber;
       private String playerName;
       private int pointsScored;
-  
-  
+
+
       public BasketBallPlayer(){
-  
+
       }
-  
+
       /**
        * Constructor with Arguments
        * @param jerseryNum
@@ -80,8 +80,8 @@ Examples:
           playerName = playerNam;
           pointsScored = pointScored;
       }
-      
-  
+
+
   }
 
 ```
@@ -117,11 +117,11 @@ Examples:
 -   public, private , default and protected
 
 
-    
+
 -   **private:**
     -   If a method or variable is marked as private (has the private access modifier assigned to it), then only code inside the same class can access the variable, or call the method.
     -   A class never be marked private.
-    
+
 ```aidl
 public class PrivateAccessModifier {
 
@@ -130,7 +130,7 @@ public class PrivateAccessModifier {
 }
 
 ```
-          
+
 -   **default:**
     -   Any class or class member declaration without any Visibility Modifiers is the default.
     -   This class will be accessible only to other classes which are in the same package.
@@ -149,7 +149,7 @@ class DefaultAccessModifier {
 -   **protected**
     -   This is used only for variable and methods.
     -   This behaves the same as default, with the addition that subclasses can access protected methods and member variables (fields) of the superclass
-    
+
 -   **public:**
     -   This means any outside class can access this class and its members from outside.
 
@@ -161,7 +161,7 @@ class DefaultAccessModifier {
     -   Method name
     -   Parameters/Parameter List
     -   Method Body
-    
+
 
 ##### Method Declaration:
 
@@ -184,13 +184,13 @@ Example:
 
         jerseryNumber = jerseyNum;
     }
-    
+
 ```
 
 ##### Method Invocation:
 
 -   How to Call a method and change the JerseyNum ?
- 
+
  ```aidl
  BasketBallPlayer basketBallPlayer = new BasketBallPlayer(1,"Dilip", 5);
  basketBallPlayer.changeJerseyNumber(2);
@@ -224,35 +224,35 @@ Code Examples:
 
 -   When a method does not return anything then the return type holds void.
 -   void is used mainly in the setter methods.
-    
-    
+
+
 ```aidl
 public void setId(int id) {
         this.id = id;
     }
 ```
-    
+
 #### Parameters:
 
 -   In general parameters are referred to the values passed to the method.
- 
+
 -   Parameters are categorized into two categories.
     -   Formal parameters.
         -   The parameters in the header of method decalration.
-        
+
             ```aidl
             public void setId(int id) { -> These are called formal parameters
                     this.id = id;
                 }
-            
+
             ```
     -   Actual parameters.
         -   The values passed to the  method are called Actual Parameters.
-        
+
             ```aidl
             Employee employee = new Employee(1, "Dilip");
             employee.setId(3); -> 3 is the actual parameter
-    
+
              ```
 #### Local Data:
 
@@ -275,7 +275,7 @@ public class TV {
         int channel =0; //- > This is a local data.
     }
 
-   
+
 }
 
 ```
@@ -292,7 +292,7 @@ public class TV {
 **Accessor:**
     -   Accessor method provides read only access to a particular value.
     -   Accessor method names always starts with **getX()**
-    
+
     ```
      public String getType() {
             return type;
@@ -301,25 +301,25 @@ public class TV {
  **Mutator**
     -   A mutator method is otherwise called as modifier method.
     -   Mutator names have the form **setX**
-    
+
     ```
     public void setType(String type) {
             this.type = type;
         }
 
     ```
-    
+
  ### Method Overloading:
- 
+
  -  In Java you can use the same method with different parameter lists for several methods.This is called method Overloading.
- 
+
  #### Method Signature:
  -  The method name along with the type and order of its parameters are called Methods signature.
- 
+
  Sample code for Method overloading:  
- 
- -  In the below examopke 
- 
+
+ -  In the below examopke
+
  ```aidl
 public class TV {
 
@@ -342,7 +342,7 @@ public class TV {
     }
 
     public void start(int  times){
-        
+
         int channel =0;
     }
     }
@@ -360,7 +360,7 @@ public class Car {
     private String model;
 
     private Car(){
-        
+
     }
 
     public Car(int year) {
@@ -383,7 +383,7 @@ public class Car {
 -   Two classes have a Association if they are aware of each other.
 
 Example code:
-  
+
   -   Below is a Student Class.
 
 ```aidl
@@ -579,7 +579,7 @@ public class HomeAddress {
     public void setZipCode(String zipCode) {
         this.zipCode = zipCode;
     }
-    
+
      @Override
         public String toString() {
             return "HomeAddress{" +
@@ -598,3 +598,70 @@ public class HomeAddress {
     -   HomeAddress
 -   We can say that Student **has a** relationship to  SchoolAddress.
 -   We can say that Student **has a** relationship to  HomeAddress.
+
+#### How to iterate each character in a String ?
+
+- The way to do it using the for loop.
+- Follow the below steps to perform that operation.
+  - Determine the length of the String.
+  - Build the for loop which takes in the strings length.
+  - use the charAt(<int>) of String to fetch each character in the String.
+  - Print each character in the String.
+
+```
+void iterateEachCharacter(){
+
+       String name = "Dilip";
+
+       for(int i=0;i<name.length();i++) {
+
+           char c = name.charAt(i);
+
+           System.out.println(c);
+       }
+   }
+```
+
+#### How to calculate the similar characters in  a String ?
+
+```
+public class StringCharacterIterate {
+
+    public static void main(String[] args) {
+
+        String name = "Dilip";
+
+        int count = 0;
+        System.out.println("Length of the String : "  + name.length());
+
+        for(int i=0;i<name.length();i++){
+
+            char c = name.charAt(i);
+
+            if(c == 'i'){
+                count = count +1 ;
+            }
+        }
+
+        System.out.println("The total number of i's are : " + count);
+    }
+}
+```
+
+
+### New Line Character:
+
+- This character is mainly used to print the values in a new line.
+
+- The character is **\n**.
+
+```
+public class NewLineCharacter {
+
+    public static void main(String[] args) {
+
+        System.out.println("Hello World \n How Are you ?");
+    }
+}
+
+```

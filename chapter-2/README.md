@@ -129,3 +129,54 @@ int total = 2 + 4;
  ```
 
 
+### Data Conversion:
+
+-   Data conversion is a process of converting one type to another.
+
+```aidl
+
+Type        default     size 
+
+booelan     false       1 bit
+byte        0           8 bits
+char        \u0000      16 bits
+short       0           16 bits
+int         0           32 bits
+long        0           64 bits
+float       0.0         32 bits
+double      0.0         64 bits
+```
+-   There are two types of conversion.
+    -   Widening Conversion.
+    -   Narrowing Conversion
+    
+
+#### Widening Conversion
+-   This is a safest data conversion because they usually not lose information.
+
+Example:  
+
+- Assigning an int value to a double.
+
+```
+int total = 1 ;
+
+double total2;
+
+total2= total;
+
+```
+
+#### Narrowing Conversion
+-   This is not the safest, becaue you might lose information and this should be avoided.
+
+Example :  
+
+-   Assigning a double to an int value. 
+-   This will give compilation issues.
+
+```aidl
+int total3 ;
+double total4=9.0;
+total3 = total4;
+```

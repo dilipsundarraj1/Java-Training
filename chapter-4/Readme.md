@@ -315,6 +315,7 @@ public class TV {
 
  #### Method Signature:
  -  The method name along with the type and order of its parameters are called Methods signature.
+ -  Return type is not part of the method signature.
 
  Sample code for Method overloading:  
 

@@ -17,7 +17,23 @@ public class DataConversion {
 
         int total3 ;
         double total4=9.0;
-        total3 = total4;
+       // total3 = total4;
+
+        //assignment conversion
+
+        int dollars = 12;
+        double money = dollars;
+
+        float sum = 4.0f;
+        int count=2;
+
+        float result = sum/count;
+
+        System.out.println(result);
+        float  f1=2.5f;
+        int result1 = (int) f1;
+
+        System.out.println(result1);
 
 
     }

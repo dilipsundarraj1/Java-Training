@@ -172,11 +172,50 @@ total2= total;
 
 Example :  
 
--   Assigning a double to an int value. 
--   This will give compilation issues.
+-   Assigning a float value to an int value. 
 
 ```aidl
-int total3 ;
-double total4=9.0;
-total3 = total4;
+float  f1=2.5f;
+int result1 = (int) f1;
 ```
+
+#### Boolean:
+
+-   A boolean value cannot be convereted to any other primitive data type.
+-   So, boolean cannot be part of the data type conversion
+
+Data conversion occurs in three ways:
+
+-   assignment conversion
+-   arithmetic conversion
+-   casting
+
+##### Assignment Conversion:
+
+-   In the below example the dollars which is an int initially is converted to 12.0 after the assigment.
+```aidl
+ int dollars = 12; -> 12
+double money = dollars;  -> 12.0
+```
+
+##### Arithmetic Conversion:
+
+-   This kind of conversion happens while performing arithmetic operation.
+```aidl
+float sum = 4.0f;
+int count=2;
+
+float result = sum/count;
+```
+
+##### Casting
+   
+-   Provide the type within the paranthesis is called casting.
+ 
+-   Syntax is  (<data type>)  
+
+```aidl
+float  f1=2.5f;
+int result1 = (int) f1;
+```
+

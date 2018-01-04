@@ -1,0 +1,265 @@
+# Chapter 5
+
+
+
+### The NULL Reference
+
+**Reference Variable**
+
+-   A variable which references to an object or instance is called a reference variable.
+
+**Example:**
+```aidl
+public class Car {
+
+    private String model;
+    private int year;
+
+    public Car(String model, int year) {
+        this.model = model;
+        this.year = year;
+    }
+
+    public static void main(String[] args) {
+
+
+        Car car1 = new Car("Camry", 2017); //car1 is a reference variable
+        Car car2 = new Car("Camry", 2017);////car2 is a reference variable
+        String name = "Scooby"; //name is a reference variable.
+        int i =1; //i is not a reference variable.
+    }
+}
+
+```
+
+-   A reference variable that does not point to an object is called a **null Reference**.
+
+-   In the below example the name is a reference variable , it does not refer to any object.
+
+```aidl
+public class NameIsNull {
+
+    public static void main(String[] args) {
+
+        String name;//not initialized ,therefore null
+
+    }
+}
+```
+
+- **null** is a reserved key word , you cannot use null as a variable name.
+
+Example:   
+
+```aidl
+String null = "dilip"; // invalid , this gives you compilation issue.
+```
+
+
+#### How to perform NULL check ?
+
+-   Use the **==** operator to check whether the reference variable is null.
+
+```aidl
+public class NameIsNull {
+
+    public static void main(String[] args) {
+
+        String name=null;//not initialized ,therefore null
+
+        if(name ==null)
+            System.out.println("Invalid Name");
+        else
+            System.out.println("Valid Name and the length is : " + name.length());
+    }
+}
+```
+
+### The this Reference
+
+-   **this** is a reserved keyword in Java
+-   This lets an object to refer itseld.
+-   As we know any method is invoked through a object. Inside that method this can be reffered to a current existing object.
+    
+```aidl
+public class Truck {
+
+    private String driverName;
+    private String truckOwnwer;
+
+    public Truck(String driverName, String truckOwnwer) {
+        this.driverName = driverName;
+        this.truckOwnwer = truckOwnwer;
+    }
+
+    public String getDriverName() {
+        return driverName;
+    }
+
+    public void setDriverName(String driverName) {
+        this.driverName = driverName;
+    }
+
+    public String getTruckOwnwer() {
+        return truckOwnwer;
+    }
+
+    public void setTruckOwnwer(String truckOwnwer) {
+        this.truckOwnwer = truckOwnwer;
+    }
+
+    public static void main(String[] args) {
+
+        Truck truck = new Truck("Dilip", "XYZ");
+        truck.getDriverName(); //this reference to a truck object
+        
+        Truck truck1 = new Truck("Scooby", "XYZ");
+        truck1.getDriverName();//this reference to a truck1 object
+    }
+}
+```
+
+### Aliases
+
+- We have to really careful when comparing Objects/Instances.
+
+-   In the below example, i1 and i2 just stores the reference variable address.
+
+    ```aidl
+    Integer i1 = new Integer(1);  // i1 refers to a reference variable address, not the value 1.
+    Integer i2 = new Integer(1);  // i2 refers to a reference variable address, not the value 1.
+    
+    ```
+#### Where does the actual object gets stored ?
+
+-   Java has its own memory and all the objects gets created stored in the location.
+-   **==** just compared the address of the variable.
+-   **equals** method compares the actual value of the object. **equals** method is part of the Object class.
+
+```aidl
+    Integer i1 = new Integer(1);  // i1 refers to a reference variable address, not the value 1.
+    Integer i2 = new Integer(1);  // i2 refers to a reference variable address, not the value 1.
+
+    System.out.println(i1==i2); //false, == refer to the variable address.They both refer to different reference variable address.
+    System.out.println(i1.equals(i2));//true, equals method compares the vaule of the object which is 1 and not the addess.
+
+```
+
+
+```aidl
+
+public class Aliases {
+
+    public static void main(String[] args) {
+
+        int a1=1;
+        int a2=1;
+
+        System.out.println(a1==a2);
+
+      Integer i1 = new Integer(1);  // i1 refers to a reference variable address, not the value 1.
+      Integer i2 = new Integer(1);  // i2 refers to a reference variable address, not the value 1.
+
+        System.out.println(i1==i2); //false, == refer to the variable address.They both refer to different reference variable address.
+        System.out.println(i1.equals(i2));//true, equals method compares the vaule not the addess.
+
+        Integer i3 = i2; // now I3 and I2 refers to the same address. Here just the address gets copied.
+
+        System.out.println(i3==i2); // true,  because both are referring to the same address.
+
+
+        String name1 ="Dilip";
+        String name2 ="Dilip";
+        System.out.println(name1==name2);
+
+
+    }
+}
+
+```
+
+#### How to assign an object to a object ?
+
+-   We can assign an object using the **=** operator.
+
+```aidl
+    Integer i2 = new Integer(1);  // i2 refers to a reference variable address, not the value 1.
+    Integer i3 = i2; // now I3 and I2 refers to the same address. Here just the address gets copied.
+    System.out.println(i3==i2); // true,  because both are referring to the same address.
+```
+
+### Passing Objects
+
+-   Java passes all parameters to a method by value.
+-   When a object is passed to a method it passes the reference variable , any change to the reference will actually change the value.
+
+```aidl
+
+public class Num {
+
+    private int value;
+
+
+    public Num(int num) {
+        value = num;
+    }
+
+    public int getValue() {
+        return value;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
+    }
+
+    @Override
+    public String toString() {
+        return "Num{" +
+                "value=" + value +
+                '}';
+    }
+}
+```
+
+```aidl
+public class ParameterChanger {
+
+    public void changeValues(int f1, Num f2, Num f3){
+
+        f1 = 999;
+        f2.setValue(888);
+        f3 = new Num(777);
+    }
+}
+
+```
+
+
+```aidl
+public class ParameterPassing {
+
+    public static void main(String[] args) {
+        int a1 =1;
+        Num a2 = new Num(2);
+        Num a3 = new Num(3);
+
+        ParameterChanger parameterTester = new ParameterChanger();
+
+        parameterTester.changeValues(1, a2, a3);
+
+        System.out.println( "a1 : " + a1);
+        System.out.println( "a2 : " + a2.getValue());
+        System.out.println( "a3 : " + a3.getValue());
+    }
+}
+
+```
+
+### The Static Modifier
+
+-   **static** can be used with method or variables.
+    -   static variable
+    -   static method
+
+**static variable:**
+-   A variable that has a static keyword 

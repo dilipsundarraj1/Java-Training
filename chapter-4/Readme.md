@@ -602,6 +602,15 @@ public class HomeAddress {
 
 #### How to iterate each character in a String ?
 
+##### What is a character ?
+ 
+ -  A character is a primtive data type in Java .
+ -  Declare the character by enclosing it in single quotes.
+ 
+ ```aidl
+char ch = 'c';
+```
+
 - The way to do it using the for loop.
 - Follow the below steps to perform that operation.
   - Determine the length of the String.
@@ -649,6 +658,30 @@ public class StringCharacterIterate {
 }
 ```
 
+### String concat:
+
+-   There are two ways to do it.
+
+    -   using the **+**
+    -   using the **concat** method which is part of the string class.
+
+```aidl
+
+public class StingConcat {
+
+    public static void main(String[] args) {
+
+        String str = "hello"+"hello"+"hello";
+
+        System.out.println(str);
+
+        String str1= "hello".concat("hello").concat("hello");
+
+        System.out.println(str1);
+    }
+}
+
+```
 
 ### New Line Character:
 

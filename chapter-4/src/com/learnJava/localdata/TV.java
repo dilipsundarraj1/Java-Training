@@ -12,6 +12,10 @@ public class TV {
         this.type = type;
         this.tvSize = tvSize;
     }
+    public TV(int tvSize, String type) {
+        this.type = type;
+        this.tvSize = tvSize;
+    }
 
     public void start(){
 

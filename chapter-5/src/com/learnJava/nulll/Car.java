@@ -34,10 +34,6 @@ public class Car {
         Car car3 = new Car("djdd", 222);
 
 
-        Car car4=null;
-        if(car4==null)
-            System.out.println("car is null");
-        else
-            car4.model="ddd";
+
     }
 }

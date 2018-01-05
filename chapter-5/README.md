@@ -25,7 +25,7 @@ public class Car {
 
         Car car1 = new Car("Camry", 2017); //car1 is a reference variable
         Car car2 = new Car("Camry", 2017);////car2 is a reference variable
-        String name = "Scooby"; //name is a reference variable.
+        String trainNumber = "Scooby"; //trainNumber is a reference variable.
         int i =1; //i is not a reference variable.
     }
 }
@@ -34,20 +34,20 @@ public class Car {
 
 -   A reference variable that does not point to an object is called a **null Reference**.
 
--   In the below example the name is a reference variable , it does not refer to any object.
+-   In the below example the trainNumber is a reference variable , it does not refer to any object.
 
 ```aidl
 public class NameIsNull {
 
     public static void main(String[] args) {
 
-        String name;//not initialized ,therefore null
+        String trainNumber;//not initialized ,therefore null
 
     }
 }
 ```
 
-- **null** is a reserved key word , you cannot use null as a variable name.
+- **null** is a reserved key word , you cannot use null as a variable trainNumber.
 
 Example:   
 
@@ -65,12 +65,12 @@ public class NameIsNull {
 
     public static void main(String[] args) {
 
-        String name=null;//not initialized ,therefore null
+        String trainNumber=null;//not initialized ,therefore null
 
-        if(name ==null)
+        if(trainNumber ==null)
             System.out.println("Invalid Name");
         else
-            System.out.println("Valid Name and the length is : " + name.length());
+            System.out.println("Valid Name and the length is : " + trainNumber.length());
     }
 }
 ```
@@ -131,6 +131,21 @@ public class Truck {
 ### Aliases
 
 - We have to really careful when comparing Objects/Instances.
+
+```aidl
+public class Num {
+
+    private int number;
+
+    public Num(int number) {
+        this.number = number;
+    }
+
+    public static void main(String[] args) {
+
+        Num number = new Num(1); // number is a reference variable and it holds the address of the object.
+        System.out.println(number);
+```
 
 -   In the below example, i1 and i2 just stores the reference variable address.
 
@@ -266,9 +281,102 @@ public class ParameterPassing {
 
 ### The Static Modifier
 
+-   static is a reserverd keyword you cannot use it to name a variable varibale or method with static.
 -   **static** can be used with method or variables.
     -   static variable
     -   static method
-
+-   A static method or variable should always be accessed using the className not using the object/instance reference variable.
+    
 **static variable:**
--   A variable that has a static keyword 
+-   A variable that has a static keyword is called **static** variable or **class** variable.
+ 
+ **Syntax to invoke a static Variable:**
+ 
+```aidl
+ClassName.variableName;
+
+```
+ 
+```aidl
+public class Train {
+
+    private int trainNumber; // instance variable
+    private static int count=0; // static variable
+
+    public Train(int name) {
+        this.trainNumber = name;
+    }
+    
+    public static void main(String[] args) {
+
+        Train train1 = new Train(10);
+        train1.count = 1; // Wrong
+        Train.count =1; // Right
+
+
+        Train train2 = new Train(11);
+        train2.count = 2; // Wrong
+        Train.count =2; // Right
+    }
+}
+
+```
+
+**static methods:**
+
+-   A static method will have the static keyword as part of the method declaration.
+
+ **Syntax to invoke a static method:**
+ 
+```aidl
+Classname.staticMethod;
+
+```
+
+**Example:**
+```aidl
+public static int changeTrainInstanceCount(){ //static method
+
+        return count++;
+    }
+
+```
+
+```aidl
+public class Train {
+
+    private int trainNumber; // instance variable
+    private static int count=0; // static variable
+
+    public Train(int name) {
+        this.trainNumber = name;
+    }
+    
+    public static int changeTrainInstanceCount(){ //static method
+
+        return count++;
+    }
+
+    public static void main(String[] args) {
+
+        Train train1 = new Train(10);
+        Train.count =1; // Right
+
+
+        Train train2 = new Train(11);
+        Train.count =2; // Right
+    }
+}
+
+```
+
+-   A compiler will issue if a static method try to access a non static variable.
+
+```aidl
+
+ public static int changeTrainInstanceCount(){ //static method
+        trainNumber = 3;
+        return count++;
+    }
+
+```

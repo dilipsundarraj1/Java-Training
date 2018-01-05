@@ -375,7 +375,7 @@ public class Train {
 ```aidl
 
  public static int changeTrainInstanceCount(){ //static method
-        trainNumber = 3;
+        trainNumber = 3;//compilation issue
         return count++;
     }
 

@@ -130,7 +130,36 @@ public class Truck {
 
 ### Aliases
 
+-   Java has its own memory and all the objects gets created stored in the location.
+
+#### Where does the actual object gets stored ?
+
+
+```aidl
+    Integer i1 = new Integer(1);  // i1 refers to a reference variable address, not the value 1.
+    Integer i2 = new Integer(1);  // i2 refers to a reference variable address, not the value 1.
+
+    System.out.println(i1==i2); //false, == refer to the variable address.They both refer to different reference variable address.
+    System.out.println(i1.equals(i2));//true, equals method compares the vaule of the object which is 1 and not the addess.
+
+```
+
+#### How to check two objects Aliases to each other?
+-   This is done by using **==** operator.
+
+```aidl
+
+ Integer i1 = new Integer(1);   // i1 refers to a reference variable address, not the value 1.
+ Integer i3 = i2; // now i1 and i3 points to the same location.
+ System.out.println(i3==i2); // true,  because both are referring to the same address.
+
+ 
+```
+
+#### Comparing Objects:
 - We have to really careful when comparing Objects/Instances.
+-   **==** just compared the address of the variable.
+-   **equals** method compares the actual value of the object. **equals** method is part of the Object class.
 
 ```aidl
 public class Num {
@@ -154,21 +183,6 @@ public class Num {
     Integer i2 = new Integer(1);  // i2 refers to a reference variable address, not the value 1.
     
     ```
-#### Where does the actual object gets stored ?
-
--   Java has its own memory and all the objects gets created stored in the location.
--   **==** just compared the address of the variable.
--   **equals** method compares the actual value of the object. **equals** method is part of the Object class.
-
-```aidl
-    Integer i1 = new Integer(1);  // i1 refers to a reference variable address, not the value 1.
-    Integer i2 = new Integer(1);  // i2 refers to a reference variable address, not the value 1.
-
-    System.out.println(i1==i2); //false, == refer to the variable address.They both refer to different reference variable address.
-    System.out.println(i1.equals(i2));//true, equals method compares the vaule of the object which is 1 and not the addess.
-
-```
-
 
 ```aidl
 
@@ -202,15 +216,7 @@ public class Aliases {
 
 ```
 
-#### How to assign an object to a object ?
 
--   We can assign an object using the **=** operator.
-
-```aidl
-    Integer i2 = new Integer(1);  // i2 refers to a reference variable address, not the value 1.
-    Integer i3 = i2; // now I3 and I2 refers to the same address. Here just the address gets copied.
-    System.out.println(i3==i2); // true,  because both are referring to the same address.
-```
 
 ### Passing Objects
 

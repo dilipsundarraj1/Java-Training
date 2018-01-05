@@ -36,6 +36,7 @@ public class Num {
         String name1 ="Dilip";
         String name2 ="Dilip";
         System.out.println(name1==name2);
+        System.out.println(name1.equals(name2));
 
 
     }

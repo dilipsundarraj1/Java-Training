@@ -3,7 +3,7 @@ package com.learnJava.passobjects;
 /**
  * Created by z001qgd on 1/4/18.
  */
-public class ParameterChanger {
+public class    ParameterChanger {
 
     public void changeValues(int f1, Num f2, Num f3){
 

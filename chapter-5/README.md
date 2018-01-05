@@ -235,16 +235,24 @@ public class Aliases {
         System.out.println(i3==i2); // true,  because both are referring to the same address.
 
 
-        String name1 ="Dilip";
-        String name2 ="Dilip";
-        System.out.println(name1==name2);
-
+       
 
     }
 }
 
 ```
 
+#### String Comparison 
+
+-   String is an exception when it comes to compares different objects of same value. 
+
+```aidl
+ String name1 ="Dilip";
+ String name2 ="Dilip";
+ System.out.println(name1==name2); //true
+ System.out.println(name1.equals(name2)); //true
+
+```
 
 
 ### Passing Objects
@@ -415,3 +423,293 @@ public class Train {
     }
 
 ```
+
+#### Constants:
+
+-   Constants are mainly declared using the final modifier.
+-   You will have **final** and **static** keyword together.
+ 
+```aidl
+    private static final int HEADS=0;
+    private static final int TAILS=0;
+```
+
+### Exceptions:
+
+When exception occurs in java then this will crash the program.
+ 
+-   An **exception** is an object that defines a problem that can be fixed.
+-   An **error** is like an exception except it cannot be fixed.
+
+```aidl
+public class ExceptionCheck {
+
+    public static void main(String[] args) {
+
+        //String s1 = "DIlip";
+        String s1 = null;
+        System.out.println(s1.length());//Null Pointer Exception and crashes the program and abrupts the execution of the program.
+
+        String s2 = "Scooby";
+        System.out.println(s2.length());//Wont get executed
+
+        String s3 = "Esha";
+        System.out.println(s3.length());//Wont get executed
+
+    }
+}
+```
+
+#### Exception Messages:
+-   If the program does not handle exception then it will crash the program and describes the exception where it happened.
+
+**stack trace:**
+-   The first line of the output tells us which exception was thrown.
+-   The rest of the output is called **stacktrace**.
+
+```aidl
+Exception in thread "main" java.lang.NullPointerException
+	at com.learnJava.exception.ExceptionCheck.main(ExceptionCheck.java:12)
+```
+
+#### Commmon Exceptions
+
+-   NullPointer Exception
+
+```aidl
+        String s1 = null;
+        System.out.println(s1.length()); // Null Pointer Exception
+```
+-   ArithmeticException
+
+-   If you try to divide a number by 0 , then it will throw number format exception.
+```aidl
+public class NumberException {
+
+    public static void main(String[] args) {
+
+        divide(10,0);
+    }
+
+    public static  void divide(int a, int b){
+
+        System.out.println(a/b); //ArithmeticException
+
+    }
+}
+```
+
+-   ArrayIndexOutofBounds Exception
+-   ClassCastException
+
+#### Throwing Exceptions
+
+-   Until now we have seen Java throwing exceptions.
+-   We can throw exceptions too.
+ 
+```aidl
+public class ThrowException {
+
+    public static void main(String[] args) {
+
+        throw new IllegalArgumentException("just testing");
+    }
+}
+
+```
+
+### Interfaces:
+
+-   An interface is a collection of constants and abstract methods.
+-   You cannot create an object of an interface.
+
+**abstract methods**
+-   An abstract method is a method that does not have an implementation.
+-   An abstract method will have the abstract keyword associated with it.
+
+```aidl
+public abstract void setComplexity(int complexity);
+```
+
+**Interface Syntax**
+
+<visibiltity modififier> interface <interfacename>{
+
+        public void setName(); // Just the declaration.
+}
+
+**Example**
+
+-   You don't have to provide the abstract keyword because all the methods are abstract by default.
+
+```aidl
+public interface Complexity {
+
+    public void setComplexity(int complexity); // method declaration.
+    int getComplexity();// method declaration.
+}
+```
+
+### Class Implements interface
+
+-  An Interface just have the declaration.
+
+-  Someone needs to use it. That someone is nothing but the class.
+
+-   Class uses the **implements** keyword to implement the Interface.
+
+```aidl
+public class Question implements  Complexity {
+    @Override
+    public void setComplexity(int complexity) {
+        
+    }
+
+    @Override
+    public int getComplexity() {
+        return 0;
+    }
+}
+
+```
+
+**Example**
+
+```aidl
+public interface Complexity {
+
+    public  void setComplexity(int level);
+    int getComplexity();
+}
+
+```
+
+```aidl
+public class Question implements  Complexity {
+
+
+    private String question, answer;
+    private int complexity;
+
+    public Question(String question, String answer) {
+        this.question = question;
+        this.answer = answer;
+    }
+
+    @Override
+    public void setComplexity(int level) {
+
+     complexity = level;
+    }
+
+    public String getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(String question) {
+        this.question = question;
+    }
+
+    public String getAnswer() {
+        return answer;
+    }
+
+    public void setAnswer(String answer) {
+        this.answer = answer;
+    }
+
+    @Override
+    public int getComplexity() {
+        return complexity;
+    }
+
+
+}
+```
+
+```aidl
+public class MiniQuiz  {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        String possbile;
+        Question q1 = new Question("What is the capital of Minnesota ? ","Saint Paul");
+        q1.setComplexity(1);
+
+
+        Question q2 = new Question("What is the capital of India ? ","New  Delhi");
+        q1.setComplexity(10);
+
+        System.out.println(q1.getQuestion());
+        System.out.println("Complexity Level : " + q1.getComplexity());
+        possbile = scanner.nextLine();
+
+        if(q1.getAnswer().equals(possbile))
+            System.out.println("correct");
+        else
+            System.out.println("No, The answer is "+ q1.getAnswer());
+
+
+        System.out.println(q2.getQuestion());
+        System.out.println("Complexity Level : " + q2.getComplexity());
+        possbile = scanner.nextLine();
+
+        if(q1.getAnswer().equals(possbile))
+            System.out.println("correct");
+        else
+            System.out.println("No, The answer is "+ q2.getAnswer());
+
+
+    }
+}
+
+```
+
+
+#### Class with Multiple Interface Example
+
+-   We can have a class implements multiple Interface.
+
+
+**Interface 1**
+
+```aidl
+public interface Simplicity {
+
+    public void simple();
+}
+```
+
+**Interface 2**
+
+```aidl
+public interface Complexity {
+
+    void setComplexity(int level);
+        int getComplexity();
+}
+```
+
+**Class with Multiple Interfaces**
+
+```aidl
+public class Multiple implements Complexity, Simplicity {
+    @Override
+    public void setComplexity(int level) {
+        
+    }
+
+    @Override
+    public int getComplexity() {
+        return 0;
+    }
+
+    @Override
+    public void simple() {
+
+    }
+}
+```
+
+

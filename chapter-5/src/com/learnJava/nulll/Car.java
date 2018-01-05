@@ -19,6 +19,25 @@ public class Car {
         Car car2 = new Car("Camry", 2017);
         String name = "Scooby"; //name is a reference variable.
         int i =1; //i is not a reference variable.i is just a primitive.
+        System.out.println(name.length());
 
+        String name1=null;
+
+       // System.out.println(name1.length());
+        if(name1==null)
+            System.out.println("name1 is null");
+        else
+            System.out.println(name1.length());
+
+        String name2 = "Essha";
+
+        Car car3 = new Car("djdd", 222);
+
+
+        Car car4=null;
+        if(car4==null)
+            System.out.println("car is null");
+        else
+            car4.model="ddd";
     }
 }

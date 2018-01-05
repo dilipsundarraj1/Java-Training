@@ -29,12 +29,20 @@ public class Truck {
         this.truckOwnwer = truckOwnwer;
     }
 
+    public void printDriverName(){
+        System.out.println(this.driverName);
+        System.out.println(this.truckOwnwer);
+    }
+
     public static void main(String[] args) {
 
-        Truck truck = new Truck("Dilip", "XYZ");
+        Truck truck2 = new Truck("Dilip", "XYZ");
+      //  System.out.println(truck.getDriverName());
+        truck2.printDriverName();
 
-        truck.getDriverName();
-        Truck truck1 = new Truck("Scooby", "XYZ");
-        truck1.getDriverName();
+        Truck truck1 = new Truck("Scooby", "ABC");
+      //  System.out.println(truck1.getDriverName());
+        truck1.printDriverName();
+
     }
 }

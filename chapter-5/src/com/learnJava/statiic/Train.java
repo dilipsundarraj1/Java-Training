@@ -9,6 +9,12 @@ public class Train {
     private static int count=0; // static variable
     private static final int HEADS=0;
     private static final int TAILS=0;
+
+    public  Train(){
+
+    }
+
+
     public Train(int name) {
         this.trainNumber = name;
     }

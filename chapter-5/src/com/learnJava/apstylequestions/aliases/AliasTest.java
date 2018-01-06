@@ -1,4 +1,4 @@
-package com.learnJava.apstylequestions;
+package com.learnJava.apstylequestions.aliases;
 
 /**
  * Created by z001qgd on 1/5/18.
@@ -34,6 +34,14 @@ public class AliasTest {
 
         System.out.println(word1 + " " + word2 + " " + word3);
 
+
+        String s1="dog";
+        String s2="dog";
+        String s3=s1;
+
+        System.out.println(s1==s2);
+        System.out.println(s1==s3);
+        System.out.println(s2==s3);
     }
 
 }

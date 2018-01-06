@@ -175,6 +175,7 @@ public class Truck {
 
 #### How to check two objects Aliases to each other?
 -   This is done by using **==** operator.
+-   Two objects are aliases to each other only the **==** operation returns true.
 
 ```aidl
 
@@ -329,6 +330,20 @@ public class ParameterPassing {
     -   static variable
     -   static method
 -   A static method or variable should always be accessed using the className not using the object/instance reference variable.
+-   A **Constructor** cannot have a **static** keyword.
+    -   This will give compilation issue.
+
+```aidl
+public class Train {
+
+    private int trainNumber; // instance variable
+   
+   
+    public static Train(){ // this is not allowed. Compilation issue
+        
+    }
+```
+
     
 **static variable:**
 -   A variable that has a static keyword is called **static** variable or **class** variable.
@@ -368,6 +383,7 @@ public class Train {
 **static methods:**
 
 -   A static method will have the static keyword as part of the method declaration.
+-   A static method cannot reference to a instance vaiable.
 
  **Syntax to invoke a static method:**
  
@@ -413,7 +429,7 @@ public class Train {
 
 ```
 
--   A compiler will issue if a static method try to access a non static variable.
+-   A compiler will issue if a static method try to access a non-static/instance variable.
 
 ```aidl
 
@@ -712,4 +728,76 @@ public class Multiple implements Complexity, Simplicity {
 }
 ```
 
+### Comparable Interface
+
+-   The comparable interface has one method called **compareto**.
+-   Any class that implements this comparable interface have to implement this method.
+-   The **compareTo** method accepts a parameter which is a object. 
+
+```aidl
+ public int compareTo(T o);
+```
+
+**Example**
+
+```aidl
+public class Num implements Comparable {
+
+    private int value;
+
+    public Num(int value) {
+        this.value = value;
+    }
+
+    public int getValue() {
+        return value;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+
+        Num num = (Num) o ; // Class Cast from Object to Num class.
+        int otherValue = num.getValue();
+
+        if(value < otherValue)
+            return -1;
+        else if (value > otherValue)
+            return 1;
+        else
+            return 0;
+    }
+
+}
+```
+
+**Driver Class**
+
+-   This driver class compares two objects. 
+
+```aidl
+public class NumDriver {
+
+    public static void main(String[] args) {
+
+        int i1 = 1;
+        int i2 =2;
+
+        if(i1 < i2)
+            System.out.println(-1);
+        else if(i1 >i2)
+            System.out.println(1);
+        else
+            System.out.println(0);
+
+        Num num1 = new Num(1);
+        Num num2 = new Num(2);
+
+        System.out.println(num1.compareTo(num2));
+    }
+}
+```
 

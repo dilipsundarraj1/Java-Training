@@ -801,3 +801,98 @@ public class NumDriver {
 }
 ```
 
+**toString()**
+
+-   Lets print the num1Object from above.
+
+```aidl
+System.out.println(num1);
+```
+```
+com.learnJava.comparable.Num@60e53b93
+```
+-   In order to print the actual value of the object.
+
+-   **toString:** This method is part of the Object class itself. 
+```
+    public String toString() {
+        return "Num{" +
+                "value=" + value +
+                '}';
+    }
+```
+-   
+### List Interface
+
+-   This interface is implemented by classes that represents an order collections of elements.
+-   The methods of List Interface is:
+    -   Iterator iterator()
+        -   returns a list iterator of the elements in the list.
+    -   ListIterator listIterator()
+        -   returns a list iterator of the elements in the list.
+    -   size
+        -   Returns the number of elements in the list
+    -   void add()
+        -   Adds the specified element in the list.
+    
+### Iterator Interface
+-   From the name it suggests that you can iterate using the iterator calls and this returns an object. This process is called Iteration.
+-   Some of the methods of the Iterator interface.
+    -   boolean hasNext()
+        -   Returns true if the executing object contains one or more objects that have not been returned by the **next** method.
+    -   Object next()
+        -   Returns a reference to the next object in the Iterator.
+    -   void remove()
+        -   Removes the item most recently returned by the next method from the underlying collection.
+        
+### ListIterator Interface
+-   This interface contains some of the methods from the Iterator plus a few more including add and set.
+
+    -   boolean hasNext()
+        -   Returns true if the executing object contains one or more objects that have not been returned by the next method.
+    -   Object next()
+        -   Returns a reference to the next object in the iterator.
+    -   void remove()
+        -   Removes the item most recently retirned by the next method from the underlying collection.
+    -   void add(Object obj)
+        -   Inserts the element obj to the list immediately after the last element that was returned by the next method.
+    -   void set(Object obj)       
+        -   Replaces the last element returned by next with the element obj.
+
+ 
+ ### Nested classes:
+ 
+ -   A class that is written inside another class is called Nested class.
+ -  The class that encloses the class is called the Enclosing class.
+ -  In the below example the **Student** class is a member of the **School** class. It is like any method or variable inside a class.
+ 
+ ```
+ public class School {
+ 
+     private String name;
+     
+     class Student {
+         
+     }
+ 
+ }
+ ```
+ 
+ -  In the above example:
+    -   School - enclosing class
+    -   Student -   nested class or inner class.
+ 
+ -  The **static** keyword  can be applied to class but only if the class is nested inside another.
+ 
+```
+ public class School {
+ 
+     private String name;
+ 
+     static class Student {
+         String studentName;
+ 
+     }
+ 
+ }
+```

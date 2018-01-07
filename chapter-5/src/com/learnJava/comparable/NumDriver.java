@@ -21,5 +21,8 @@ public class NumDriver {
         Num num2 = new Num(2);
 
         System.out.println(num1.compareTo(num2));
+
+
+        System.out.println(num1);
     }
 }

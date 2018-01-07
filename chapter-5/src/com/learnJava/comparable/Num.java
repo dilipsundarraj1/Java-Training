@@ -19,7 +19,6 @@ public class Num implements Comparable {
         this.value = value;
     }
 
-    @Override
     public int compareTo(Object o) {
 
         Num num = (Num) o ;
@@ -33,4 +32,9 @@ public class Num implements Comparable {
             return 0;
     }
 
+    public String toString() {
+        return "Num{" +
+                "value=" + value +
+                '}';
+    }
 }

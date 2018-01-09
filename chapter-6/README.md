@@ -26,6 +26,8 @@
 ```
 -   In the above example it cannot store double or float.
 
+
+
 ### How to fetch an element in an array ?
 
 **Syntax**
@@ -197,6 +199,12 @@ public class IntiliazerArray {
 }
 ```
 
+### How Arrays store in memory?
+
+```aidl
+
+```
+
 ## Array as parameters:
 
 -   We can pass array as parameters for a method. Because arrays are nothing but objects.
@@ -227,4 +235,6 @@ public class IntiliazerArray {
 }
 
 ```
+
+## Arrays of Objects:
 

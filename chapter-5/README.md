@@ -325,7 +325,7 @@ public class ParameterPassing {
 
 ### The Static Modifier
 
--   static is a reserverd keyword you cannot use it to name a variable varibale or method with static.
+-   static is a reserverd keyword that you use it to name a variable varibale or method with static.
 -   **static** can be used with method or variables.
     -   static variable
     -   static method

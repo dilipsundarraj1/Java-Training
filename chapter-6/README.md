@@ -201,9 +201,11 @@ public class IntiliazerArray {
 
 ### How Arrays store in memory?
 
-```aidl
+-   Arrays are nothing but objects. 
+-   Its stores the arrays as like objects.
+-   Reference variable and the Actually array with values.It gets stored like below.
 
-```
+![](https://github.com/dsaish3/Java-Training/blob/master/images/java-arrays-2.png)
 
 ## Array as parameters:
 
@@ -237,4 +239,20 @@ public class IntiliazerArray {
 ```
 
 ## Arrays of Objects:
+
+-   When we store objects in array , each element is a seperate object.
+-   An array of objects is really an array of object references.
+-   We all know String is an object.
+
+```aidl
+ String[] strings = new String[5];
+```
+
+### Initializer Array Objects:
+
+
+```aidl
+String[] grades = {"A","A-","B+","B-","C+","C-"};
+```
+
 

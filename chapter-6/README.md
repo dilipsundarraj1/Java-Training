@@ -207,6 +207,24 @@ public class IntiliazerArray {
 
 ![](https://github.com/dsaish3/Java-Training/blob/master/images/java-arrays-2.png)
 
+### ArrayIndecOutOfBoundsException:
+
+-   This exception will be thrown when you try to access an index that is out of range (not a valid one).
+
+```aidl
+public class ArrayIndexException {
+
+    public static void main(String[] args) {
+
+        int[] num = {1,2,3}; // available indexes are 0 ,1,2
+
+        System.out.println(num[3]); // index 3 is not available, this will throw the exception.
+    }
+}
+
+
+```
+
 ## Array as parameters:
 
 -   We can pass array as parameters for a method. Because arrays are nothing but objects.
@@ -254,5 +272,82 @@ public class IntiliazerArray {
 ```aidl
 String[] grades = {"A","A-","B+","B-","C+","C-"};
 ```
+### How arrays of objects are stores in memory ?
 
 
+![](https://github.com/dsaish3/Java-Training/blob/master/images/java-arrays-3.png)
+
+### Parrallel Arrays:
+
+-   Two arrays with corresponding elements are called **parallel** arrays.
+
+-   In the below example , 
+    -   **grades** array is used to store the grades.
+    -   **cutoff** array is used to store the grade number
+
+```aidl
+public class StringArray {
+    public static void main(String[] args) {
+
+        String[] grades = {"A","A-","B+","B-","C+","C-"}; // intialized array holds the grades
+
+        int[] cutoff = {95,90,87,83,80, 77};// intialized array holds the grade marks
+
+        for (int level=0; level < cutoff.length;level++){
+            System.out.println(grades[level] + "\t" + cutoff[level]);
+        }
+    }
+}
+```
+
+-   This is not recommended because this can easily go out of sync if one element is added or removed in the either one of the array. 
+
+### Command-Line:
+
+-   Package is **com.learnJava.commandlinearguments**
+-   Class is **NameTag**.
+
+```aidl
+package com.learnJava.commandlinearguments;
+
+public class NameTag {
+
+    public static void main(String[] args) { //formal parameters
+
+        System.out.println();
+        System.out.println("   " + args[0]);
+    }
+}
+```
+
+-   Two steps to compile and execute a Java file.
+    -   compile **javac**
+    -   execute/run **java**
+
+#### How to check compile the java class file?
+
+-   Use the **javac** command to compile the java class file.
+
+-   Go to the root of the directory ie., **src**
+
+-   Run the below command.
+
+```aidl
+javac com/learnJava/commandlinearguments/NameTag.java 
+
+```
+
+-   The above command will create the **.class** file.
+
+#### How to run/execute the compiled java class file?
+
+-   Go to the root of the directory ie., **src**
+
+-   Run the below command. **Dilip** is the first argument to the array.
+
+```aidl
+java com/learnJava/commandlinearguments/NameTag Dilip
+
+```
+
+-   Our program will print the value.

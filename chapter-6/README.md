@@ -350,4 +350,4 @@ java com/learnJava/commandlinearguments/NameTag Dilip
 
 ```
 
--   Our program will print the value.
+-   **Dilip** will get printed because our program reads the value from the command and prints the first element in the array.

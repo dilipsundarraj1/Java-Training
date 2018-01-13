@@ -5,17 +5,13 @@
 -   An array is a list of values. Each value is stores at a numbered position in the array.
 -   The number for each position is called an **index** or **subscript**.
 
-
 ![](https://github.com/dsaish3/Java-Training/blob/master/images/java-arrays-1.png)
 
 
 ### How to Declare an array ?
 
 -   In Java , Arrays are objects. To create an array, you must create a reference to the array.
--   Below creates an int array of 11 elements.
--   An array will store the element of same type. 
--   A value stores in an array is called **array element.** 
--   The type of values an array stores is called **element type**.
+
 ```aidl
  int[] height = new int[11];
  
@@ -24,9 +20,12 @@
  int[11] -> We are asking Java to create an array to store 11 elements. It cannot be changed.
  
 ```
--   In the above example it cannot store double or float.
 
-
+-   Above declaration creates an int array of 11 elements.
+-   An array will store the element of same type.
+    -   In the above example height  cannot store double or float.
+-   A value stores in an array is called **array element.** 
+-   The type of values an array stores is called **element type**.
 
 ### How to fetch an element in an array ?
 
@@ -38,6 +37,8 @@ arrayReferenceVariable[index-number]
 
 ```
 int[] height = new int[11];
+
+indexes for the height array are -  0,1,2,3,4,5,6,7,8,9,10
 ```
 -   The above example creates an array of 11 elements.
 
@@ -85,7 +86,7 @@ public class BasicArray {
 }
 ```
 
-**BackWard Iteration **
+**BackWard Iteration**
 
 ```aidl
 
@@ -351,3 +352,106 @@ java com/learnJava/commandlinearguments/NameTag Dilip
 ```
 
 -   **Dilip** will get printed because our program reads the value from the command and prints the first element in the array.
+
+#### Filling Arrays as Objects:
+
+-   Storing an object as an array. We have already seen String example. Here we will look at **CD** storing cd Object.
+
+**CD**
+
+```aidl
+public class CD {
+
+    private String title, artist;
+    private double cost;
+    private  int tracks;
+
+    public CD(String title, String artist, double cost, int tracks) {
+        this.title = title;
+        this.artist = artist;
+        this.cost = cost;
+        this.tracks = tracks;
+    }
+
+    @Override
+    public String toString() {
+        return "CD{" +
+                "title='" + title + '\'' +
+                ", artist='" + artist + '\'' +
+                ", cost=" + cost +
+                ", tracks=" + tracks +
+                '}';
+    }
+}
+```
+
+**CDCollection:**
+
+-   This class represents a collection of Cd's.
+
+```aidl
+public class CDCollection {
+
+    private CD[] collection;
+    private int count;
+    private double totalCost;
+
+    public CDCollection() {
+        collection = new CD[2];
+        count =0;
+        totalCost =0.0;
+    }
+
+    public void addCD( String title, String artist, double cost, int tracks){
+
+        if(count == collection.length){
+            increaseSize();
+        }
+        collection[count] = new CD(title,artist,totalCost,tracks);
+        totalCost+=cost;
+        count++;
+
+    }
+
+    private void increaseSize() {
+
+        CD[] temp = new CD[collection.length * 2];
+
+        for(int cd =0; cd < collection.length; cd++){
+            temp[cd] = collection[cd];
+        }
+        collection = temp;
+    }
+
+    @Override
+    public String toString() {
+        return "CDCollection{" +
+                "collection=" + Arrays.toString(collection) +
+                ", count=" + count +
+                ", totalCost=" + totalCost +
+                '}';
+    }
+}
+```
+
+**Tunes**
+
+-   This is the driver class for CD collections.
+
+```aidl
+public class Tunes {
+
+    public static void main(String[] args) {
+
+        CDCollection music = new CDCollection();
+
+        music.addCD("Song1","artist1", 20.0,3 );
+        music.addCD("Song2","artist1", 30.0,10 );
+
+        System.out.println(music);
+
+        music.addCD("Song2","artist1", 30.0,10 ); // ArrayindexOutofBounds
+
+    }
+}
+```

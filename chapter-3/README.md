@@ -212,3 +212,34 @@ public class WhileLoop {
     }
 }
 ```
+
+### Iterator
+
+```aidl
+public class URLDissector {
+
+    public static void main(String[] args) throws FileNotFoundException {
+
+        String url;
+        Scanner fileScanner,urlScanner;
+
+        fileScanner = new Scanner(new File("/Dilip/College-Assignments/Esha/codebase/Java-Training/chapter-3/src/com/learnJava/iterator/urls.inp"));
+
+        while(fileScanner.hasNext()){ // true -> there are lines, false-> if it reaches the end of the line
+
+            url = fileScanner.nextLine(); // fetches the next line
+
+            System.out.println("URL" + url);
+
+            urlScanner = new Scanner(url);
+            urlScanner.useDelimiter("/"); // delimiter to split the values.
+
+            while(urlScanner.hasNext()){ // true -> if there are elements.
+                System.out.println(urlScanner.next());
+            }
+        }
+
+    }
+}
+
+```

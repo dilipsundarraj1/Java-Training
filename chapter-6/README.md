@@ -90,7 +90,44 @@ public class Arrays {
 
 -   Use **forloop** and **length** method to iterate an array.
 
+
+
 **Forward Iteration**
+
+**Example1**
+
+```aidl
+public class ArraysPractice {
+
+    public static void main(String[] args) {
+
+        int[] ints = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
+
+        for(int i=0;i<ints.length;i++)
+            System.out.println(ints[i]);
+
+    }
+}
+
+```
+
+**Example2 with Simplified Syntax**
+
+```aidl
+public class ArraysPractice {
+
+    public static void main(String[] args) {
+
+        int[] ints = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
+
+        for(int i : ints)
+            System.out.println(i);
+
+    }
+}
+
+```
+
 ```
 public class BasicArray {
 
@@ -484,4 +521,9 @@ public class Tunes {
 ### Array Searching
 
 -   A common problem with arrays is that searching for a particular element in the arrray.
--   Any item that we are looking for is called a Target.
+-   Any item that we are looking for is called a **Target**.
+
+#### Linear Search:
+
+-   The most baisc search is the Linear search. 
+-   We look for each element in the array from the begining until we reach the element we are looking for. 

@@ -36,7 +36,7 @@
 ```aidl
 int a=10; //assigns the variable 'a' with value 10 
 
-int numArray = new int[5]; //intiliazes an empty array, all the values will be zero. 
+int[] numArray = new int[5]; //intiliazes an empty array, all the values will be zero. 
 
 numAArray[0]=1 //Filling/assigns a value at index 0
 numAArray[1]=3//Filling/assigns a value at index 1

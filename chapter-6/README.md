@@ -480,3 +480,8 @@ public class Tunes {
     }
 }
 ```
+
+### Array Searching
+
+-   A common problem with arrays is that searching for a particular element in the arrray.
+-   Any item that we are looking for is called a Target.

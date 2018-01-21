@@ -5,7 +5,7 @@
 -   An array is a list of values. Each value is stores at a numbered position in the array.
 -   The number for each position is called an **index** or **subscript**.
 
-![](https://github.com/dsaish3/Java-Training/blob/master/images/java-arrays-1.png)
+
 
 
 ### How to Declare an array ?
@@ -21,13 +21,34 @@
  
 ```
 
+![](https://github.com/dsaish3/Java-Training/blob/master/images/java-arrays-4.png)
+
+
 -   Above declaration creates an int array of 11 elements.
 -   An array will store the element of same type.
     -   In the above example height  cannot store double or float.
 -   A value stores in an array is called **array element.** 
 -   The type of values an array stores is called **element type**.
 
-### How to fetch an element in an array ?
+
+### Difference between an int and int array:
+
+```aidl
+int a=10; //assigns the variable 'a' with value 10 
+
+int numArray = new int[5]; //intiliazes an empty array, Indexes
+numAArray[0]=1 //assigns a value at index 0
+numAArray[1]=3//assigns a value at index 1
+numAArray[2]=8//assigns a value at index 2
+numAArray[3]=23//assigns a value at index 3
+numAArray[4]=99//assigns a value at index 4
+```
+
+-   Index of the array aways starts with zero
+![](https://github.com/dsaish3/Java-Training/blob/master/images/java-arrays-1.png)
+
+
+### How to get the value of the index in an array ?
 
 **Syntax**
 
@@ -276,7 +297,7 @@ String[] grades = {"A","A-","B+","B-","C+","C-"};
 ### How arrays of objects are stores in memory ?
 
 
-![](https://github.com/dsaish3/Java-Training/blob/master/images/java-arrays-3.png)
+![](https://github.com/dsaish3/Java-Training/blob/master/images/java-arrays-3.jpg)
 
 ### Parrallel Arrays:
 

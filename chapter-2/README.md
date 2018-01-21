@@ -219,3 +219,25 @@ float  f1=2.5f;
 int result1 = (int) f1;
 ```
 
+### Math
+
+-   Math is a library class and all the methods are static.
+-   Since it is a static method we call it using the Classname.
+
+```aidl
+public class MathNumber {
+
+    public static void main(String[] args) {
+
+        System.out.println(Math.abs(-123)); //returns a positive number.
+
+        System.out.println(Math.abs(-12.22)); //returns a positive number.
+
+        System.out.println(Math.pow(2,5)); //2 X 2 x2X2x2
+
+        System.out.println(Math.random()); // generates a random number
+
+        System.out.println(Math.sqrt(4)); // square root of a number
+    }
+}
+```

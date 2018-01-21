@@ -109,7 +109,7 @@ public class CarIsNotNull {
 -   **this** is a reserved keyword in Java
 -   This lets an object to refer itseld.
 -   As we know any method is invoked through a object. Inside that method this can be reffered to a current existing object.
-    
+
 ```aidl
 public class Truck {
 
@@ -183,7 +183,7 @@ public class Truck {
  Integer i3 = i2; // now i1 and i3 points to the same location.
  System.out.println(i3==i2); // true,  because both are referring to the same address.
 
- 
+
 ```
 
 #### Comparing Objects:
@@ -211,7 +211,7 @@ public class Num {
     ```aidl
     Integer i1 = new Integer(1);  // i1 refers to a reference variable address, not the value 1.
     Integer i2 = new Integer(1);  // i2 refers to a reference variable address, not the value 1.
-    
+
     ```
 
 ```aidl
@@ -236,16 +236,16 @@ public class Aliases {
         System.out.println(i3==i2); // true,  because both are referring to the same address.
 
 
-       
+
 
     }
 }
 
 ```
 
-#### String Comparison 
+#### String Comparison
 
--   String is an exception when it comes to compares different objects of same value. 
+-   String is an exception when it comes to compares different objects of same value.
 
 ```aidl
  String name1 ="Dilip";
@@ -337,24 +337,24 @@ public class ParameterPassing {
 public class Train {
 
     private int trainNumber; // instance variable
-   
-   
+
+
     public static Train(){ // this is not allowed. Compilation issue
-        
+
     }
 ```
 
-    
+
 **static variable:**
 -   A variable that has a static keyword is called **static** variable or **class** variable.
- 
+
  **Syntax to invoke a static Variable:**
- 
+
 ```aidl
 ClassName.variableName;
 
 ```
- 
+
 ```aidl
 public class Train {
 
@@ -364,7 +364,7 @@ public class Train {
     public Train(int name) {
         this.trainNumber = name;
     }
-    
+
     public static void main(String[] args) {
 
         Train train1 = new Train(10);
@@ -386,7 +386,7 @@ public class Train {
 -   A static method cannot reference to a instance vaiable.
 
  **Syntax to invoke a static method:**
- 
+
 ```aidl
 Classname.staticMethod;
 
@@ -410,7 +410,7 @@ public class Train {
     public Train(int name) {
         this.trainNumber = name;
     }
-    
+
     public static int changeTrainInstanceCount(){ //static method
 
         return count++;
@@ -444,7 +444,7 @@ public class Train {
 
 -   Constants are mainly declared using the final modifier.
 -   You will have **final** and **static** keyword together.
- 
+
 ```aidl
     private static final int HEADS=0;
     private static final int TAILS=0;
@@ -453,7 +453,7 @@ public class Train {
 ### Exceptions:
 
 When exception occurs in java then this will crash the program.
- 
+
 -   An **exception** is an object that defines a problem that can be fixed.
 -   An **error** is like an exception except it cannot be fixed.
 
@@ -522,7 +522,7 @@ public class NumberException {
 
 -   Until now we have seen Java throwing exceptions.
 -   We can throw exceptions too.
- 
+
 ```aidl
 public class ThrowException {
 
@@ -578,7 +578,7 @@ public interface Complexity {
 public class Question implements  Complexity {
     @Override
     public void setComplexity(int complexity) {
-        
+
     }
 
     @Override
@@ -713,7 +713,7 @@ public interface Complexity {
 public class Multiple implements Complexity, Simplicity {
     @Override
     public void setComplexity(int level) {
-        
+
     }
 
     @Override
@@ -732,7 +732,7 @@ public class Multiple implements Complexity, Simplicity {
 
 -   The comparable interface has one method called **compareto**.
 -   Any class that implements this comparable interface have to implement this method.
--   The **compareTo** method accepts a parameter which is a object. 
+-   The **compareTo** method accepts a parameter which is a object.
 
 ```aidl
  public int compareTo(T o);
@@ -776,7 +776,7 @@ public class Num implements Comparable {
 
 **Driver Class**
 
--   This driver class compares two objects. 
+-   This driver class compares two objects.
 
 ```aidl
 public class NumDriver {
@@ -813,7 +813,7 @@ com.learnJava.comparable.Num@60e53b93
 ```
 -   In order to print the actual value of the object.
 
--   **toString:** This method is part of the Object class itself. 
+-   **toString:** This method is part of the Object class itself.
 ```
     public String toString() {
         return "Num{" +
@@ -834,7 +834,7 @@ com.learnJava.comparable.Num@60e53b93
         -   Returns the number of elements in the list
     -   void add()
         -   Adds the specified element in the list.
-    
+
 ### Iterator Interface
 -   From the name it suggests that you can iterate using the iterator calls and this returns an object. This process is called Iteration.
 -   Some of the methods of the Iterator interface.
@@ -844,7 +844,7 @@ com.learnJava.comparable.Num@60e53b93
         -   Returns a reference to the next object in the Iterator.
     -   void remove()
         -   Removes the item most recently returned by the next method from the underlying collection.
-        
+
 ### ListIterator Interface
 -   This interface contains some of the methods from the Iterator plus a few more including add and set.
 
@@ -859,40 +859,40 @@ com.learnJava.comparable.Num@60e53b93
     -   void set(Object obj)       
         -   Replaces the last element returned by next with the element obj.
 
- 
+
  ### Nested classes:
- 
+
  -   A class that is written inside another class is called Nested class.
  -  The class that encloses the class is called the Enclosing class.
  -  In the below example the **Student** class is a member of the **School** class. It is like any method or variable inside a class.
- 
+
  ```
  public class School {
- 
+
      private String name;
-     
+
      class Student {
-         
+
      }
- 
+
  }
  ```
- 
+
  -  In the above example:
     -   School - enclosing class
     -   Student -   nested class or inner class.
- 
+
  -  The **static** keyword  can be applied to class but only if the class is nested inside another.
- 
+
 ```
  public class School {
- 
+
      private String name;
- 
+
      static class Student {
          String studentName;
- 
+
      }
- 
+
  }
 ```

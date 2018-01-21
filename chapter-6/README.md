@@ -38,11 +38,11 @@ int a=10; //assigns the variable 'a' with value 10
 
 int[] numArray = new int[5]; //intiliazes an empty array, all the values will be zero. 
 
-numAArray[0]=1 //Filling/assigns a value at index 0
-numAArray[1]=3//Filling/assigns a value at index 1
-numAArray[2]=8//Filling/assigns a value at index 2
-numAArray[3]=23//Filling/assigns a value at index 3
-numAArray[4]=99//Filling/assigns a value at index 4
+numArray[0]=1 //Filling/assigns a value at index 0
+numArray[1]=3//Filling/assigns a value at index 1
+numArray[2]=8//Filling/assigns a value at index 2
+numArray[3]=23//Filling/assigns a value at index 3
+numArray[4]=99//Filling/assigns a value at index 4
 ```
 
 -   Index of the array aways starts with zero

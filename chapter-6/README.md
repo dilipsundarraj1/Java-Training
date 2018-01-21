@@ -36,15 +36,17 @@
 ```aidl
 int a=10; //assigns the variable 'a' with value 10 
 
-int numArray = new int[5]; //intiliazes an empty array, Indexes
-numAArray[0]=1 //assigns a value at index 0
-numAArray[1]=3//assigns a value at index 1
-numAArray[2]=8//assigns a value at index 2
-numAArray[3]=23//assigns a value at index 3
-numAArray[4]=99//assigns a value at index 4
+int numArray = new int[5]; //intiliazes an empty array, all the values will be zero. 
+
+numAArray[0]=1 //Filling/assigns a value at index 0
+numAArray[1]=3//Filling/assigns a value at index 1
+numAArray[2]=8//Filling/assigns a value at index 2
+numAArray[3]=23//Filling/assigns a value at index 3
+numAArray[4]=99//Filling/assigns a value at index 4
 ```
 
 -   Index of the array aways starts with zero
+
 ![](https://github.com/dsaish3/Java-Training/blob/master/images/java-arrays-1.png)
 
 
@@ -226,6 +228,8 @@ public class IntiliazerArray {
 -   Arrays are nothing but objects. 
 -   Its stores the arrays as like objects.
 -   Reference variable and the Actually array with values.It gets stored like below.
+
+![](https://github.com/dsaish3/Java-Training/blob/master/images/java-arrays-4.png)
 
 ![](https://github.com/dsaish3/Java-Training/blob/master/images/java-arrays-2.png)
 

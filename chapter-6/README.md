@@ -526,4 +526,85 @@ public class Tunes {
 #### Linear Search:
 
 -   The most baisc search is the Linear search. 
--   We look for each element in the array from the begining until we reach the element we are looking for. 
+-   We look for each element in the array from the beginning until we reach the element we are looking for or we reach the end of the array.
+ 
+ 
+**Example**
+
+-   In this example
+```aidl
+public class LinearSearch {
+
+    public static void main(String[] args) {
+
+        int[] ints= {3,15,2,8,7,1,14,25,38,10,-2,61,5};
+
+        //to find 25
+
+        int toFind=25;
+
+        for(int i : ints){
+            if(toFind == i){
+                System.out.println("Found the Value :" + toFind);
+            }
+        }
+
+
+    }
+}
+```
+-   The main problem with this is that it can be slow while working with large amounts of data.
+**Example**
+-   If there are 10000 elements, then the element we are looking for is at the 9999th position then we need to iterate for 9999 times.
+
+**Example - Linear Search with a method:** 
+
+```aidl
+public class LinearSearch1 {
+
+    public int performLinearSearch(int[] numArray, int target){
+        int[] ints= {3,15,2,8,7,1,14,25,38,10,-2,61,5};
+
+
+        for(int i : ints){
+            if(target == i){
+                System.out.println("Found the Value :" + target);
+                return i;
+            }
+        }
+
+        return -1;
+    }
+
+    public static void main(String[] args) {
+
+        int[] intArray= {3,15,2,8,7,1,14,25,38,10,-2,61,5};
+
+       LinearSearch1 linearSearch1 = new LinearSearch1();
+        int target = 38;
+
+        System.out.println(linearSearch1.performLinearSearch(intArray,target ));
+
+        int target1 = 39;
+
+        System.out.println(linearSearch1.performLinearSearch(intArray,target1 ));
+
+    }
+}
+
+```
+
+#### Binary Search:
+
+-   Consider an array that has elements filled from smallest to the largest number.
+
+```aidl
+int[] numArray = {2,4,7,11,14,15,23};
+```
+
+-   Lets say we are looking for the element **15**. Then the first step is that we will find out the value of the middle index in the array.
+
+-   The middle element in the above example is **11** and the index is **3**.
+    -   Is 15 lesser than 11 ? No, then we will start looking for the elements after that index.
+        -   Meaning we will checking the values of the index 3,4,5 and 6.
+    

@@ -531,7 +531,10 @@ public class Tunes {
  
 **Example**
 
--   In this example
+-   In this example the search starts from the 0th index and looks for that element until the last index in the array.
+
+![](https://github.com/dsaish3/Java-Training/blob/master/images/linear-search.jpg)
+
 ```aidl
 public class LinearSearch {
 

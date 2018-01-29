@@ -234,10 +234,7 @@ public class LetterCount {
 
         for(int letter=0; letter<upper.length; letter++){
 
-            System.out.println( (char) (letter+'A'));
-            System.out.println( ": " + upper[letter]);
-            System.out.println( (char) (letter+'a'));
-            System.out.println( ": " + upper[letter]);
+            System.out.println( (char) (letter+'A') + ": " + upper[letter] +  "\t" + (char) (letter+'a') + ": "+  + lower[letter]);
 
         }
     }
@@ -557,8 +554,8 @@ public class LinearSearch {
 }
 ```
 -   The main problem with this is that it can be slow while working with large amounts of data.
-**Example**
--   If there are 10000 elements, then the element we are looking for is at the 9999th position then we need to iterate for 9999 times.
+
+-   If there are 1000 elements, then the element we are looking for is at the 999th position then we need to iterate for 999 times.
 
 **Example - Linear Search with a method:** 
 

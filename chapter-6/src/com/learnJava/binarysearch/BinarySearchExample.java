@@ -7,7 +7,8 @@ public class BinarySearchExample {
 
     public static void main(String[] args) {
 
-        int[] numArray = {2,4,7,11,14,15,23};
+       // int[] numArray = {2,4,7,11,14,15,23};
+        int[] numArray = {5,12,17,23,38,44,77,84,90};
 
         int low =0; int high = numArray.length-1; int middle = (low+high)/2;
 

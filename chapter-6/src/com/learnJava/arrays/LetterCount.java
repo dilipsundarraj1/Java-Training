@@ -23,7 +23,7 @@ public class LetterCount {
 
         System.out.println(" Length of the entered String : " + line.length());
 
-        for(int ch=0;ch < line.length(); ch++){
+        for(int ch=0;ch < line.length(); ch++){ //Esha
             current = line.charAt(ch);
             if(current >= 'A' && current <='Z')
                 upper[current-'A']++;
@@ -33,14 +33,12 @@ public class LetterCount {
                 else
                     other++;
         }
-
         for(int letter=0; letter<upper.length; letter++){
 
-            System.out.println( (char) (letter+'A'));
-            System.out.println( ": " + upper[letter]);
-            System.out.println( (char) (letter+'a'));
-            System.out.println( ": " + upper[letter]);
+            System.out.println( (char) (letter+'A') + ": " + upper[letter] +  "\t" + (char) (letter+'a') + ": "+  + lower[letter]);
 
         }
+
+        System.out.println(" non Alphaber character : "  + other);
     }
 }

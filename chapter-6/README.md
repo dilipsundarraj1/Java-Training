@@ -627,7 +627,7 @@ low = 0; high = 14(15(length-1); middle=7
          -  **yes** -> Change the high and middle variables.
             -   high=middle-1
          -  **no** -> change the low and  middle variables.
-            -   low = **middle+1      
+            -   low = middle+1      
     - continue the process until you find the target value or low value is greater than high
     
 ```aidl

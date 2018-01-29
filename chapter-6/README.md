@@ -598,6 +598,8 @@ public class LinearSearch1 {
 
 -   Consider an array that has elements filled from smallest to the largest number.
 
+![](https://github.com/dsaish3/Java-Training/blob/master/images/binary-search.png)
+
 ```aidl
 int[] numArray = {2,4,7,11,14,15,23};
 ```

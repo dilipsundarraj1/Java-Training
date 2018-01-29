@@ -601,12 +601,63 @@ public class LinearSearch1 {
 ![](https://github.com/dsaish3/Java-Training/blob/master/images/binary-search.png)
 
 ```aidl
-int[] numArray = {2,4,7,11,14,15,23};
+int[] numArray = {2,4,5,7,8,9,12,14,17,19,22,25,27,28,33};
 ```
 
--   Lets say we are looking for the element **15**. Then the first step is that we will find out the value of the middle index in the array.
+-   Lets say we are looking for the element **12**. Then the first step is that we will find out the value of the middle index in the array.
 
--   The middle element in the above example is **11** and the index is **3**.
-    -   Is 15 lesser than 11 ? No, then we will start looking for the elements after that index.
-        -   Meaning we will checking the values of the index 3,4,5 and 6.
+-    We are going to maintain three variables.
+    -   low
+    -   middle
+    -   high
+**Step 1**
+-   The intial values are set as below:
+```aidl
+low = 0; high = 14(15(length-1); middle=7
+
+```
+
+**Step 2**
+
+-   Determine the target value that you are looking for.
+    -   In this example we are going to search for **12**
+-   numArray[middle] is 14 and the value we are looking for is **12**.
+    -   Is (14 != 12) and 0 <=14
+        -   Is (12 < 14)
+         -  **yes** -> Change the high and middle variables.
+            -   high=middle-1
+         -  **no** -> change the low and  middle variables.
+            -   low = **middle+1      
+    - continue the process until you find the target value or low value is greater than high
     
+```aidl
+public class BinarySearchExample {
+
+    public static void main(String[] args) {
+
+        int[] numArray = {2,4,5,7,8,9,12,14,17,19,22,25,27,28,33};
+
+        int low =0; int high = numArray.length-1; int middle = (low+high)/2;
+
+        int target = 13;
+        System.out.println("middele index value is : " + middle);
+        System.out.println("middele index value is : " + numArray[middle]);
+        
+        while(numArray[middle] !=target && (low <= high)){
+            System.out.println("inside the while");
+            if(target < numArray[middle]){
+                high = middle-1;
+            }else{
+                low = middle+1;
+            }
+            middle = (low+high)/2;
+        }
+
+        if(numArray[middle]==target){
+            System.out.println("Found the Value  : " + numArray[middle]);
+        }else
+            System.out.println("No Match");
+    }
+}
+
+```

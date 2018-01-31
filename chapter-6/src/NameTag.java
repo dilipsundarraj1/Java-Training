@@ -4,7 +4,7 @@
 public class NameTag {
     public static void main(String[] args) { //formal parameters
 
-        System.out.println();
-        System.out.println("   " + args[0]);
+
+        System.out.println(-24 > -25);
     }
 }

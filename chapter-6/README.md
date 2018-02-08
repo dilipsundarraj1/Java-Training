@@ -412,7 +412,7 @@ java com/learnJava/commandlinearguments/NameTag Dilip
 
 -   **Dilip** will get printed because our program reads the value from the command and prints the first element in the array.
 
-#### How to increase the size of the dynamically ?
+#### How to increase the size of the array dynamically ?
 
 -   This example shows how to increase the size of the array dynamically.
 

@@ -14,11 +14,11 @@
 
 ```aidl
  int[] height = new int[11];
- 
+
  int -> type
  height -> reference variable
  int[11] -> We are asking Java to create an array to store 11 elements. It cannot be changed.
- 
+
 ```
 
 ![](https://github.com/dsaish3/Java-Training/blob/master/images/java-arrays-4.png)
@@ -27,16 +27,16 @@
 -   Above declaration creates an int array of 11 elements.
 -   An array will store the element of same type.
     -   In the above example height  cannot store double or float.
--   A value stores in an array is called **array element.** 
+-   A value stores in an array is called **array element.**
 -   The type of values an array stores is called **element type**.
 
 
 ### Difference between an int and int array:
 
 ```aidl
-int a=10; //assigns the variable 'a' with value 10 
+int a=10; //assigns the variable 'a' with value 10
 
-int[] numArray = new int[5]; //intiliazes an empty array, all the values will be zero. 
+int[] numArray = new int[5]; //intiliazes an empty array, all the values will be zero.
 
 numArray[0]=1 //Filling/assigns a value at index 0
 numArray[1]=3//Filling/assigns a value at index 1
@@ -73,7 +73,7 @@ indexes for the height array are -  0,1,2,3,4,5,6,7,8,9,10
 
 -  **length** method will give your the total length of the array.
 
--   This **length** is different from the **length()** in String.
+-   This **length** is different from the **length** in String.
 
 ```aidl
 public class Arrays {
@@ -168,7 +168,7 @@ public class ReverseOrder {
         for(int index= numbers.length-1; index >=0; index--){ // Always use array.length-1
             System.out.println(numbers[index] + " ");
         }
-        
+
     }
 }
 
@@ -259,7 +259,7 @@ public class IntiliazerArray {
 
 ### How Arrays store in memory?
 
--   Arrays are nothing but objects. 
+-   Arrays are nothing but objects.
 -   Its stores the arrays as like objects.
 -   Reference variable and the Actually array with values.It gets stored like below.
 
@@ -341,7 +341,7 @@ String[] grades = {"A","A-","B+","B-","C+","C-"};
 
 -   Two arrays with corresponding elements are called **parallel** arrays.
 
--   In the below example , 
+-   In the below example ,
     -   **grades** array is used to store the grades.
     -   **cutoff** array is used to store the grade number
 
@@ -360,7 +360,7 @@ public class StringArray {
 }
 ```
 
--   This is not recommended because this can easily go out of sync if one element is added or removed in the either one of the array. 
+-   This is not recommended because this can easily go out of sync if one element is added or removed in the either one of the array.
 
 ### Command-Line:
 
@@ -393,7 +393,7 @@ public class NameTag {
 -   Run the below command.
 
 ```aidl
-javac com/learnJava/commandlinearguments/NameTag.java 
+javac com/learnJava/commandlinearguments/NameTag.java
 
 ```
 
@@ -411,6 +411,65 @@ java com/learnJava/commandlinearguments/NameTag Dilip
 ```
 
 -   **Dilip** will get printed because our program reads the value from the command and prints the first element in the array.
+
+#### How to increase the size of the dynamically ?
+
+-   This example shows how to increase the size of the array dynamically.
+
+**Example**
+```aidl
+public class IntegerArray {
+
+    public int[] intArray = new int[5];
+    int count=0;
+
+    public void addValueToTheArray(int i){
+
+        if(count == intArray.length){
+            int[] temp = new int[intArray.length * 2]; //10 elements
+
+            for(int j=-0;j<intArray.length;j++){
+                temp[j]= intArray[j];
+            }
+
+        intArray = temp;
+        }
+        intArray[count] = i;
+        count = count +1;
+
+    }
+
+    public void printArray(){
+
+        for(int i : intArray){
+            System.out.println(i);
+        }
+    }
+
+}
+```
+
+**Client**
+
+```aidl
+public class IntegerArrayClient {
+
+    public static void main(String[] args) {
+
+        IntegerArray integerArray = new IntegerArray();
+
+        integerArray.addValueToTheArray(1);
+        integerArray.addValueToTheArray(10);
+        integerArray.addValueToTheArray(20);
+        integerArray.addValueToTheArray(33);
+        integerArray.addValueToTheArray(100);
+        integerArray.addValueToTheArray(200);
+        integerArray.printArray();
+
+    }
+}
+
+```
 
 #### Filling Arrays as Objects:
 
@@ -522,10 +581,10 @@ public class Tunes {
 
 #### Linear Search:
 
--   The most baisc search is the Linear search. 
+-   The most baisc search is the Linear search.
 -   We look for each element in the array from the beginning until we reach the element we are looking for or we reach the end of the array.
- 
- 
+
+
 **Example**
 
 -   In this example the search starts from the 0th index and looks for that element until the last index in the array.
@@ -557,7 +616,7 @@ public class LinearSearch {
 
 -   If there are 1000 elements, then the element we are looking for is at the 999th position then we need to iterate for 999 times.
 
-**Example - Linear Search with a method:** 
+**Example - Linear Search with a method:**
 
 ```aidl
 public class LinearSearch1 {
@@ -629,7 +688,7 @@ low = 0; high = 14(15(length-1); middle=7
          -  **no** -> change the low and  middle variables.
             -   low = middle+1      
     - continue the process until you find the target value or low value is greater than high
-    
+
 ```aidl
 public class BinarySearchExample {
 
@@ -642,7 +701,7 @@ public class BinarySearchExample {
         int target = 13;
         System.out.println("middele index value is : " + middle);
         System.out.println("middele index value is : " + numArray[middle]);
-        
+
         while(numArray[middle] !=target && (low <= high)){
             System.out.println("inside the while");
             if(target < numArray[middle]){
@@ -661,3 +720,18 @@ public class BinarySearchExample {
 }
 
 ```
+
+### Sorting
+
+-   Sorting is the process of arranging a list of items in order.
+-   Two sorts are popular
+    -   Selection sort
+    -   insertion sort
+
+#### Selection Sort:
+-   Selection sort is a combination of sorting and searching.
+-   During each iteration the smallest value will be found and moved to the appropriate position.
+-   
+-   The selection sort uses two for loops.
+    -   outer loop -  controls where the next value will be stored.
+    -   inner loop -  finds the smallest value in the rest of the list by scanning all positions.

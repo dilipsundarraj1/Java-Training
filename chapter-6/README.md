@@ -655,6 +655,7 @@ public class LinearSearch1 {
 
 #### Binary Search:
 
+-   Arrays needs to be sorted for Binary Search to work better.
 -   Consider an array that has elements filled from smallest to the largest number.
 
 ![](https://github.com/dsaish3/Java-Training/blob/master/images/binary-search.png)

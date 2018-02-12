@@ -656,39 +656,8 @@ public class LinearSearch1 {
 #### Binary Search:
 
 -   Arrays needs to be sorted for Binary Search to work better.
--   Consider an array that has elements filled from smallest to the largest number.
 
 ![](https://github.com/dsaish3/Java-Training/blob/master/images/binary-search.png)
-
-```aidl
-int[] numArray = {2,4,5,7,8,9,12,14,17,19,22,25,27,28,33};
-```
-
--   Lets say we are looking for the element **12**. Then the first step is that we will find out the value of the middle index in the array.
-
--    We are going to maintain three variables.
-    -   low
-    -   middle
-    -   high
-**Step 1**
--   The intial values are set as below:
-```aidl
-low = 0; high = 14(15(length-1); middle=7
-
-```
-
-**Step 2**
-
--   Determine the target value that you are looking for.
-    -   In this example we are going to search for **12**
--   numArray[middle] is 14 and the value we are looking for is **12**.
-    -   Is (14 != 12) and 0 <=14
-        -   Is (12 < 14)
-         -  **yes** -> Change the high and middle variables.
-            -   high=middle-1
-         -  **no** -> change the low and  middle variables.
-            -   low = middle+1      
-    - continue the process until you find the target value or low value is greater than high
 
 ```aidl
 public class BinarySearchExample {
@@ -721,6 +690,33 @@ public class BinarySearchExample {
 }
 
 ```
+
+#### Steps:
+-    We are going to maintain three variables.
+    -   low - 0 (first index)
+    -   middle - (low+high/2)
+    -   high - (last index)
+-   The first check is that we will check the middle element.
+-   Is my middle value not equal to the target value?
+
+**target equals middle element**
+
+-   That's it we found the value
+
+**target is less than middle element**
+
+-   Change the high value to (middle -1) and repeat the while loop
+
+**target is greater than middle element**
+
+-   Change the low value to (middle+1) and repeat the while loop.
+
+###  Comparing Searches:
+
+-   Binary search performs best compared to the Linear Search but it needs the data to be sorted.
+
+-   So Always choose the algorithm based on the situation.
+
 
 ### Sorting
 

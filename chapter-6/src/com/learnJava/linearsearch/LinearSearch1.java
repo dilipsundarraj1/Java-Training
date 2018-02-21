@@ -6,10 +6,9 @@ package com.learnJava.linearsearch;
 public class LinearSearch1 {
 
     public int performLinearSearch(int[] numArray, int target){
-        int[] ints= {3,15,2,8,7,1,14,25,38,10,-2,61,5};
 
 
-        for(int i : ints){
+        for(int i : numArray){
             if(target == i){
                 System.out.println("Found the Value :" + target);
                 return i;
@@ -28,9 +27,9 @@ public class LinearSearch1 {
 
         System.out.println(linearSearch1.performLinearSearch(intArray,target ));
 
-        int target1 = 39;
+        /*int target1 = 39;
 
         System.out.println(linearSearch1.performLinearSearch(intArray,target1 ));
-
+*/
     }
 }

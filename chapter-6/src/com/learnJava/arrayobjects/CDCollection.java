@@ -17,9 +17,18 @@ public class CDCollection {
         totalCost =0.0;
     }
 
-    public void addCD( String title, String artist, double cost, int tracks){
+    public CD[] getCollection() {
+        return collection;
+    }
+
+    public void setCollection(CD[] collection) {
+        this.collection = collection;
+    }
+
+    public void addCD(String title, String artist, double cost, int tracks){
 
         if(count == collection.length){
+
             increaseSize();
         }
         collection[count] = new CD(title,artist,totalCost,tracks);
@@ -36,6 +45,13 @@ public class CDCollection {
             temp[cd] = collection[cd];
         }
         collection = temp;
+    }
+
+    public void printCDCollection(){
+
+        for(CD cd : collection){
+            System.out.println(cd);
+        }
     }
 
     @Override

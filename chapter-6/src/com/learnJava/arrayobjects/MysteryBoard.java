@@ -7,7 +7,7 @@ public class MysteryBoard {
     int row = 5;
     int column = 5;
 
-    String[][] mystery = new String[row][column];  // 2D String array with 3 rows and 3 columns
+    String[][] mystery = new String[row][column];
 
     Random rand = new Random();
 

@@ -7,30 +7,37 @@ public class SelectionSort {
 
     private static void sort(int[] grades) {
 
-        int min, temp;
+        int  temp,minValue,minIndex=0;
 
-        for(int index=0;index<grades.length-1; index++){
+        for(int index=0;index<grades.length-1; index++){// outerLoop
 
-            min= index;
+            minIndex= index;
+            minValue=grades[index];
 
-            for(int scan=index+1;scan<grades.length;scan++){
-                    if(grades[scan] < grades[min])
-                        min=scan;
+            for(int scan=index+1;scan<grades.length;scan++){ //innerloop starts at the first unsorted item.
+                    if(grades[scan] < grades[minIndex]){
+                        minIndex=scan;
+                        minValue=grades[scan];
+                    }
             }
 
-            temp = grades[min];
-            grades[min] = grades[index];
-            grades[index] = temp;
+            if(minValue < grades[index]){
+                temp = grades[minIndex]; // assigns the minimum value to the
+                grades[minIndex] = grades[index]; // moves the value in the current index to the minIndex position
+                grades[index] = temp; // moves the minimum value to the current index position
+            }
+
+
         }
     }
 
     public static void main(String[] args) {
 
-        int[] grades = {89,94,69,80,97,85,73,91,77,85,93};
+        int[] numbers = {5,4,1,3,2};
 
-        SelectionSort.sort(grades);
+        SelectionSort.sort(numbers);
 
-        for (int grade:grades){
+        for (int grade:numbers){
             System.out.println(grade);
         }
     }

@@ -728,7 +728,367 @@ public class BinarySearchExample {
 #### Selection Sort:
 -   Selection sort is a combination of sorting and searching.
 -   During each iteration the smallest value will be found and moved to the appropriate position.
--   
 -   The selection sort uses two for loops.
     -   outer loop -  controls where the next value will be stored.
     -   inner loop -  finds the smallest value in the rest of the list by scanning all positions.
+
+```aidl
+package com.learnJava.sort;
+
+/**
+ * Created by z001qgd on 1/31/18.
+ */
+public class SelectionSort {
+
+    private static void sort(int[] grades) {
+
+        int  temp,minValue,minIndex=0;
+
+        for(int index=0;index<grades.length-1; index++){// outerLoop
+
+            minIndex= index;
+            minValue=grades[index];
+
+            for(int scan=index+1;scan<grades.length;scan++){ //innerloop starts at the first unsorted item.
+                    if(grades[scan] < grades[minIndex]){
+                        minIndex=scan;
+                        minValue=grades[scan];
+                    }
+            }
+
+            if(minValue < grades[index]){
+                temp = grades[minIndex]; // assigns the minimum value to the
+                grades[minIndex] = grades[index]; // moves the value in the current index to the minIndex position
+                grades[index] = temp; // moves the minimum value to the current index position
+            }
+
+
+        }
+    }
+
+    public static void main(String[] args) {
+
+        int[] grades = {89,94,69,80,97,85,73,91,77,85,93};
+
+        SelectionSort.sort(grades);
+
+        for (int grade:grades){
+            System.out.println(grade);
+        }
+    }
+
+
+}
+```
+
+#### Insertion Sort:
+
+-   The insertion sort starts the sort process by starting with the first index.
+-   It checks the value to the left is smaller than the current value if yes then swap and continues the process with the rest of the elements.
+-   The idea is this type of sort makes sure that all the items to the left are smaller and sorted.
+-   Start with the first index in the array and compare the values prior to that index is sorted in increasing order.
+
+##### How it works ?
+-   Set the **key** value which is the current index value.
+-   Compare the **key** value with the all the values prior to the current index and swap the values.
+-   We are going to use a combination of for loop and a while loop.
+
+```
+public class InsertionSort {
+
+    public static void insertionSort(int[] numbers){
+
+
+        for(int index=1; index<numbers.length;index++){
+
+            int key =  numbers[index];
+            int position =index;
+
+            while (position>0 && numbers[position-1]>key){//
+                numbers[position] = numbers[position-1];
+                position--;
+            }
+            numbers[position] = key;
+        }
+
+    }
+
+    public static void main(String[] args) {
+
+        int[] numArray = {5,4,3,21,1};
+
+        insertionSort(numArray);
+
+        for(int val : numArray){
+            System.out.println(val);
+        }
+
+
+    }
+}
+```
+### Sorting an Array Of Objects
+
+-   We are going to use **insertion** sort in this example.
+-   We will use **Comparable** interface.
+    - Comparable interface has a method **compareTo** to compare the values and returns an integer.
+
+**Contact**
+
+```aidl
+public class Contact implements  Comparable{
+
+    private String firstName, lastName, phone;
+
+    public Contact(String firstName, String lastName, String phone) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phone = phone;
+    }
+
+    @Override
+    public String toString() {
+        return "Contact{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", phone='" + phone + '\'' +
+                '}';
+    }
+
+    @Override
+    public int compareTo(Object o) {
+
+        int result;
+
+        Contact temp = (Contact) o;
+
+        if(firstName.equals((temp.lastName)))
+            return firstName.compareTo(firstName);
+        else
+            return lastName.compareTo(temp.lastName);
+
+    }
+}
+
+```
+**SortPhoneList**
+```aidl
+package com.learnJava.sort;
+
+public class SortPhoneList {
+
+    public static void insertionSort(Comparable[] contacts){
+
+        for(int index=1; index<contacts.length; index++){
+            Comparable key = contacts[index];
+            int position = index;
+
+            while(position>0 && contacts[position-1].compareTo(key) > 0 ){
+                contacts[position] = contacts[position-1];
+                position--;
+            }
+
+            contacts[position] = key;
+
+        }
+    }
+
+    public static void main(String[] args) {
+
+        Contact[] friends = new Contact[4];
+        Contact contact1 = new Contact("Ben","DEF", "12345");
+        Contact contact2 = new Contact("Adam","ABC", "12345");
+        Contact contact4 = new Contact("Mathew","ABC", "12345");
+        Contact contact3 = new Contact("Dan","XYZ", "12345");
+
+        friends[0] = contact1;
+        friends[1] = contact2;
+        friends[2] = contact3;
+        friends[3] = contact4;
+
+
+        System.out.println("**** Before Sort ****");
+        for(Contact contact :  friends){
+            System.out.println(contact);
+        }
+
+        insertionSort(friends);
+        System.out.println("**** After Sort ****");
+
+        for(Contact contact :  friends){
+            System.out.println(contact);
+        }
+
+
+     }
+}
+
+```
+
+### Comparing Sorts:
+
+-   Efficiency is the first thing to look for.
+    -   **Space Efficiency** - Refers to the amount of space that an algorithm uses.
+    -   **Time Efficeincy** - Refers to how long it taken alogirthm to run.
+-   An algorithm that uses less memory and Space is more efficeint.
+-   **Big Oh** notation is the way to determine how efficient an algorithm is.
+
+#### How efficiency is measured?
+
+-   Efficiency is measured by the size of the input.
+-   For a sorting algorithm the input is the array of the elements to be sorted.
+-   We will use **n** for the size of the elements.
+-   We can measure the **time efficiency** by calculating the number of times a statement gets executed with the input values.
+    -   The important thing here is that how the running time grows with the input.
+-   In sorting algorithm the common operation is comparison, so in here how the comparison grows with the input values.
+
+#### Time Efficiency:
+**Selection Sort:**
+    -   Selection sort has an outerloop that iterates **n-1** times.
+        -   Inner loop that iterates for 1 to n-1 times based on the index.
+    -   So the **Big-oh** notation for selection sort is **O(n^2)**
+    -   This means that selection sort is no worse than on the order of n^2 unit of time.
+
+**Insertion Sort**
+    -   Its two nested loops which runs n times each. so that each statement runs **n^2** times.
+    -   So the **Big-oh** notation for insertion sort is **O(n^2)**
+-   An algorithm that was **O(n)** would be more efficienct then one that **O(n^2)**.
+-   LikeWise **O(n^3)** and **O(2^n)** is less efficient than **O(n^2).
+         
+#### Space Efficiency:
+
+-   The amount of space being used is equivalent to the number of elements.
+-   The Big oh notation for selection and insertion sort is **O(n)**.
+
+So the conclusion is both **insertion** and **selection** sort has same efficiency.
+
+-   Selection sort is easy to understand because each value moves to its final place in the list.
+-   Although both have the same efficiency selection sort makes few swaps.
+
+### Two Dimensional Array:
+
+-   We have already discussed about it while discussing the **MysteryBoard** example.
+
+```aidl
+public class MysteryBoard {
+
+    int row = 5;
+    int column = 5;
+
+    String[][] mystery = new String[row][column];
+
+    Random rand = new Random();
+
+
+    public MysteryBoard(){
+
+        for(int i=0;i<row;i++){
+            for(int j=0;j<column;j++){
+                mystery[i][j] = "-";
+            }
+        }
+    }
+
+    public void setMystery(){
+
+        mystery[rand.nextInt(row)][rand.nextInt(column)] = "*";
+
+    }
+
+    public void guess(){
+
+        int guess1 = rand.nextInt(row);
+        int guess2 = rand.nextInt(row);
+        if(mystery[guess1][guess2].equals("*")){
+            mystery[guess1][guess2] = "!";
+        }else{
+            mystery[guess1][guess2] = "X";
+        }
+    }
+
+    public String toString(){
+        for(int i=0;i<row;i++){
+            for(int j=0;j<column;j++){
+                if(mystery[i][j].equals("*")){
+                    mystery[i][j]="-";
+                }
+                System.out.print(mystery[i][j]+" ");
+            }
+            System.out.println("\n");
+        }
+
+        return "";
+
+    }
+
+    public static void main(String[] args) {
+        MysteryBoard  mysteryBoard = new MysteryBoard();
+        System.out.println("*** Original Mystery Board ***");
+        System.out.println(mysteryBoard);
+
+        mysteryBoard.setMystery();
+        mysteryBoard.setMystery();
+        mysteryBoard.setMystery();
+        mysteryBoard.guess();
+        mysteryBoard.guess();
+        mysteryBoard.guess();
+        mysteryBoard.guess();
+
+        System.out.println("*** Mystery Board after Guess ***");
+        System.out.println(mysteryBoard);
+
+
+
+    }
+}
+```
+
+### ArrayList
+
+-   This class is part of the java.util package.
+-   It works like an array, but it can dynamically increase or decrease the size. This is not the case with **ArrayList**
+-   **Arraylist** does not have to declared to store a particular type.
+-   Array list implements the **List** interface.
+
+**Example**
+
+```aidl
+package com.learnJava.arraylist;
+
+import java.util.ArrayList;
+
+public class MusicBand {
+    public static void main(String[] args) {
+
+        ArrayList artists = new ArrayList(); //Creates an instance of the ArrayList
+
+        artists.add("ABC"); //add method to add an element to the list.
+        artists.add("XYZ");
+        artists.add("GHI");
+
+        System.out.println(artists);
+
+        int location = artists.indexOf("ABC"); // returns the location of the artists.
+        System.out.println("Location : " + location);
+
+        System.out.println("Size of the artists : " + artists.size());
+    }
+}
+```
+
+#### Methods in ArrayList
+
+-    Lets read page 334 in the book.
+
+
+#### Specifying an Arraylist Element Type
+
+```aidl
+        List<String> stringList = new ArrayList<>(); //syntax 1
+
+        ArrayList<String> stringList1 = new ArrayList<>(); //syntax 2
+
+```
+ 
+    
+    

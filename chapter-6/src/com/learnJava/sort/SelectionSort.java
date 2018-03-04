@@ -8,10 +8,7 @@ public class SelectionSort {
     private static void sort(int[] grades) {
 
         int  temp,minValue,minIndex=0;
-        int count=0;
-
         for(int index=0;index<grades.length-1; index++){// outerLoop
-            count = count +1;
             minIndex= index;
             minValue=grades[index];
 
@@ -27,15 +24,9 @@ public class SelectionSort {
                 grades[minIndex] = grades[index]; // moves the value in the current index to the minIndex position
                 grades[index] = temp; // moves the minimum value to the current index position
             }
-        /*    if(index==3)
-                break;
-*/
-
-
 
         }
 
-        System.out.println("No of passes : " + count);
     }
 
     public static void main(String[] args) {

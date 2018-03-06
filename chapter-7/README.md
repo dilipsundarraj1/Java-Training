@@ -292,6 +292,7 @@ public class Academic {
 -   An abstract class defines the common behavior so that it can be inherited. The sub class will inherit the by extending the abstract class.
 -   An abstract can also just define abstract methods so that the child classes can implement on its own.
 
+
 ```aidl
 package com.learnJava.abstractt;
 
@@ -317,8 +318,74 @@ public abstract class Vehicle {
 
     public int speed;
 
+    public void drive(){
+        System.out.println("Drive the Vehicle");
+    }
+
+
 
     public abstract int calculateMileage(int speed);
+}
+```
+
+#### Not allowed.
+
+```aidl
+Vehicle vehicle = new Vehicle(); // This is not allowed.
+
+```
+
+**Boat**
+
+```aidl
+package com.learnJava.abstractt;
+
+public class Boat extends Vehicle{
+
+    @Override
+    public int calculateMileage(int speed) {
+        return speed/20;
+    }
+}
+
+```
+
+**Car**
+
+```aidl
+package com.learnJava.abstractt;
+
+public class Car extends Vehicle {
+
+    @Override
+    public int calculateMileage(int speed) {
+        return speed /10;
+    }
+}
+```
+**VechicleDemo**
+
+```aidl
+package com.learnJava.abstractt;
+
+public class VechicleDemo {
+
+    public static void main(String[] args) {
+
+        Car car = new Car();
+        car.setOwner("ABC");
+        car.setSpeed(40); // calls the speed of the Car class
+        car.drive(); // calls the drive method of the abstract class
+
+        System.out.println("car mileage per gallon : "+car.calculateMileage(car.getSpeed()));
+
+        Boat boat = new Boat();
+        boat.setOwner("XYZ");
+        boat.setSpeed(60);  // calls the speed of the boat class
+        boat.drive(); // calls the drive method of the abstract class
+
+        System.out.println("boat mileage per gallon : "+boat.calculateMileage(boat.getSpeed()));
+    }
 }
 
 ```

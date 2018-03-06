@@ -4,6 +4,8 @@
 
 -   When a child class defines a method with the same name and signature as a method in the parent class, we say that child's version overrides the parent's version in favor of its own.
 
+-   An overriding method should match the return type, arguments and method name in the child class.
+
 **Thought**
 
 ```aidl

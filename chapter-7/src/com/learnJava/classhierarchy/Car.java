@@ -39,4 +39,8 @@ public class Car {
                 ", noOfWheels=" + noOfWheels +
                 '}';
     }
+
+    public void drive(){
+        System.out.println("inside Car drive method");
+    }
 }

@@ -391,3 +391,61 @@ public class VechicleDemo {
 }
 
 ```
+
+### Indirect Use of Class Members
+
+-   We can get access to members of the super class from the subclass only if the members are not private.
+
+
+**Car**
+
+```aidl
+package com.learnJava.inheritanceprivate;
+
+public class Car {
+
+    private String owner;
+
+    public Car(String owner) {
+        this.owner = owner;
+    }
+
+    public String getOwner() {
+        return owner;
+    }
+
+    public void setOwner(String owner) {
+        this.owner = owner;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "owner='" + owner + '\'' +
+                '}';
+    }
+}
+
+```
+**Toyota**
+
+```aidl
+package com.learnJava.inheritanceprivate;
+
+public class Toyota extends Car {
+
+    public Toyota(String owner) {
+        super(owner);
+    }
+
+    public static void main(String[] args) {
+
+        Toyota toyota = new Toyota("ABC");
+        //toyota.owner// wont accessible , because ownwer memeber is private
+        System.out.println(toyota.getOwner());
+    }
+}
+```
+
+### PolyMorphism
+

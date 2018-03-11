@@ -449,3 +449,121 @@ public class Toyota extends Car {
 
 ### PolyMorphism
 
+-   The term polymorphism means having many forms.
+
+#### Example
+ 
+-   In school a person will behave as student
+-   In bus a person will behave as a passanger
+-   In Shopping mall the same person will behave as customer.
+-   In Office the same person will behave as an employee
+
+#### Polymorphism and Inheritance
+
+-   Achieving polymorphism using Inheritance.
+
+**Binding**
+
+-   This means at some point computer has to determine which method to execute during the program execution.
+-   For polymorphic references, the binding happens at run time this is called dynamic binding or late binding.
+
+
+**CarPolyMorphismDemo**
+
+```aidl
+package com.learnJava.abstractt;
+
+public class CarPolyMorphismDemo {
+
+    public static void main(String[] args) {
+
+        Vehicle car = new Car();
+        car.drive();
+
+        Vehicle boat = new Boat();
+        boat.drive();
+    }
+}
+```
+
+#### Polymorphism with Interfaces
+
+-   Achieving polymorphism using Interfaces.
+
+**Binding**
+
+-   This means at some point computer has to determine which method to execute during the program execution.
+-   For polymorphic references, the binding happens at run time this is called dynamic binding or late binding.
+
+**Animal**
+
+```aidl
+package com.learnJava.intetfacee;
+
+/**
+ * Created by z001qgd on 3/11/18.
+ */
+public interface Animal {
+        public void eat();
+        public void walk();
+}
+
+```
+
+**Cat**
+
+```aidl
+package com.learnJava.intetfacee;
+
+public class Cat implements  Animal {
+    @Override
+    public void eat() {
+        System.out.println("Cat is eating");
+    }
+
+    @Override
+    public void walk() {
+        System.out.println("Cat is walking");
+    }
+}
+
+```
+
+**Dog**
+```aidl
+package com.learnJava.intetfacee;
+
+public class Dog implements Animal {
+    @Override
+    public void eat() {
+        System.out.println("Dog is eating");
+    }
+
+    @Override
+    public void walk() {
+        System.out.println("Dog is walking");
+    }
+}
+
+```
+
+**PolyMorphismInterfaceDemo**
+
+```aidl
+package com.learnJava.intetfacee;
+
+public class PolyMorphismInterfaceDemo {
+
+    public static void main(String[] args) {
+
+        Animal animal = new Cat();
+        animal.eat();
+        animal.walk();
+
+        animal = new Dog();
+        animal.walk();
+        animal.eat();
+    }
+}
+
+```

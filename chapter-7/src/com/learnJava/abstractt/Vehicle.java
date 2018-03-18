@@ -4,6 +4,10 @@ public abstract class Vehicle {
 
     public String owner;
 
+    public static String year="1990";
+
+    public static final int b=0;
+
     public String getOwner() {
         return owner;
     }
@@ -24,6 +28,11 @@ public abstract class Vehicle {
 
     public void drive(){
         System.out.println("Drive the Vehicle");
+    }
+
+    public static String getVehicleYear(){
+        System.out.println("getVehicleYear in Vehicle ");
+        return year;
     }
 
 

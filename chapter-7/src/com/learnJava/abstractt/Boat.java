@@ -10,4 +10,8 @@ public class Boat extends Vehicle{
     public void drive(){
         System.out.println("Drive the Boat");
     }
+
+    public void method1(){
+        System.out.println("inside method1 in car");
+    }
 }

@@ -8,6 +8,11 @@ public class VechicleDemo {
         car.setOwner("ABC");
         car.setSpeed(40); // calls the speed of the Car class
         car.drive(); // calls the drive method of the abstract class
+        System.out.println(Vehicle.getVehicleYear());
+        System.out.println(Car.getVehicleYear());
+        //Vehicle.drive()
+        System.out.println(Car.b);
+        System.out.println(Vehicle.b);
 
         System.out.println("car mileage per gallon : "+car.calculateMileage(car.getSpeed()));
 

@@ -4,10 +4,15 @@ public class CarPolyMorphismDemo {
 
     public static void main(String[] args) {
 
-        Vehicle car = new Car();
-        car.drive();
+        Vehicle vechicle = new Car();
+        vechicle.drive();
+        //vechicle.
 
-        Vehicle boat = new Boat();
-        boat.drive();
+        vechicle = new Boat();
+        vechicle.drive();
+
+        Car car= new Car();
+        car.method1();
+
     }
 }

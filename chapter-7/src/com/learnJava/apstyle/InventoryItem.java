@@ -9,6 +9,8 @@ public abstract class InventoryItem {
     private Date entry;
     private double basePrice;
 
+    private String itemName;
+
     public String getItemName() {
         return itemName;
     }
@@ -17,7 +19,7 @@ public abstract class InventoryItem {
         this.itemName = itemName;
     }
 
-    private String itemName;
+
 
     public InventoryItem(Date entry, double basePrice, String itemName) {
         this.id = makeId();

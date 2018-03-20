@@ -21,4 +21,15 @@ public class Perishable extends InventoryItem {
     }
 
 
+    public static void main(String[] args) {
+
+        Date date1 = java.sql.Date.valueOf("2018-03-18");
+        Date date2 = java.sql.Date.valueOf("2018-03-19");
+        Date date3 = java.sql.Date.valueOf("2018-03-19");
+
+        System.out.println(date1.compareTo(date2));
+        System.out.println(date2.compareTo(date1));
+        System.out.println(date2.compareTo(date3));
+    }
+
 }

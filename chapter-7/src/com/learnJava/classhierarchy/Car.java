@@ -1,5 +1,6 @@
 package com.learnJava.classhierarchy;
 
+
 public class Car {
 
     private int year;

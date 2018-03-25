@@ -77,8 +77,8 @@ public class RecursiveSort {
 
     public static void main(String[] args) {
 
-//       int[] grades = {89,94,69,80,97,85,73,91,77};
-        int[] grades = {4,3,2,1};
+       int[] grades = {89,94,69,80,97,85,73,77};
+       // int[] grades = {4,3,2,1}; //1,2,3,4
 
         doMergeSort(grades, 0, grades.length-1);
     }

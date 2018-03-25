@@ -64,3 +64,8 @@ public class RecursionExample {
 
     }
 ```
+
+### Merge Sort:
+
+-   The time complexity of merge sort is **O(nlogn)**.
+-   

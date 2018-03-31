@@ -11,6 +11,7 @@ public class RecursionExample {
             result = num+sumUsingRecursion(num-1);
 
         }
+        System.out.println("Result is : " + result);
         return  result;
 
     }
@@ -27,7 +28,7 @@ public class RecursionExample {
 
     public static void main(String[] args) {
 
-        System.out.println(sumUsingRecursion(5));
-        System.out.println(sumUsingIteration(5));
+        System.out.println("Final Result is : "+ sumUsingRecursion(5));
+       // System.out.println(sumUsingIteration(5));
     }
 }

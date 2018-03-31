@@ -1,6 +1,8 @@
 # Recursive Programming
 
--   This is a technique in which a method calls itself.\
+-   This is a technique in which a method calls itself.
+    -   Recursive Case
+    -   Base Case
 
 ## Recursion in Math
 
@@ -63,6 +65,26 @@ public class RecursionExample {
         return  result;
 
     }
+```
+
+### Base Case:
+
+-   Base case is the stopping point in the recursion.
+
+```aidl
+public static int sumUsingRecursion(int num){
+
+        int result;
+        if(num==1)     // This is the base case
+            result=1;
+        else{
+            result = num+sumUsingRecursion(num-1);
+
+        }
+        return  result;
+
+    }
+
 ```
 
 ### Merge Sort:

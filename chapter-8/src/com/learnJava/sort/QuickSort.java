@@ -45,7 +45,8 @@ public class QuickSort {
 
 
     }
-    private static void iterateArray(int[] numbers) {
+    private static void iterate
+            (int[] numbers) {
         //System.out.println("Inside Iterate array");
         for(int i : numbers)
             System.out.println("After Sort " + i);

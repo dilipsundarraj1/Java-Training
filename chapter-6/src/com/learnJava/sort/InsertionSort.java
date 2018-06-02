@@ -15,6 +15,10 @@ public class InsertionSort {
                 position--;
             }
             numbers[position] = key;
+            for(int a : numbers){
+                System.out.print(a);
+            }
+            System.out.println();
 
         }
 
@@ -26,7 +30,7 @@ public class InsertionSort {
 
     public static void main(String[] args) {
 
-        int[] numArray = {5,4,3,21,1};
+        int[] numArray = {7,3,8,5,2};
 
         /*int[] numArray = {9,4,12,2,6,8,18};*/
 

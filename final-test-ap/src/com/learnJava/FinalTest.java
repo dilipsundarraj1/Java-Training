@@ -267,6 +267,80 @@ public class FinalTest {
 
     }
 
+    public static void f(int a, int b)
+    {
+        if (a/b != 0)
+            f(a/b,b);
+        System.out.print( a % b);
+
+
+    }
+
+    public static void stringRecursion(String s)
+    {
+
+        if (s.length() < 16)
+        {
+            System.out.println(s);
+        }
+        stringRecursion(s + "*");
+    }
+
+    public static void problem24(){
+
+        int var1 = 0;
+        int var2 = 2;
+
+        while ((var2 != 0) && ((var1 / var2) >= 0)) {
+            var1 = var1 + 1;
+            var2 = var2 - 1;
+        }
+        System.out.println( " Result of problem24, var 1 : " + var1 + ", var 2: " + var2);
+    }
+
+    public static void problem25(int value){
+
+         ArrayList<Integer> numList = new ArrayList<>();
+        //5, 7, 8, 12
+        numList.add(5);
+        numList.add(7);
+        numList.add(8);
+        numList.add(12);
+
+        int i = 0;
+        while (i < numList.size() && numList.get(i) < value)
+        {
+            i++;
+        }
+        numList.add(i, value);
+        System.out.println("Result of problem 25 is : " + numList);
+
+
+    }
+
+    public static void whatsIt(int n){
+        if(n < 10){
+        whatsIt(n);
+        System.out.println(n % 10);
+    }
+    }
+
+    public static void check(int i){
+
+        int[] a = {1,2}; int max =2;
+
+        if(a[i] == max || !(max != a[i])){
+            System.out.println("inside if ");
+        }else
+            System.out.println("inside else");
+
+        if(a[i] < max || a[i] > max){
+            System.out.println("inside if ");
+        }else{
+            System.out.println("inside else");
+        }
+    }
+
 
     public static void main(String[] args) {
         problem1();
@@ -288,6 +362,15 @@ public class FinalTest {
 
         problem19();
         problem20();
+
+        f(5,2);
+       // stringRecursion("s");
+        problem24();
+        problem25(11);
+        whatsIt(347);
+        f(3,7);
+
+        check(1);
     }
 
 }
